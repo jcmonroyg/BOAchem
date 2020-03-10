@@ -63,7 +63,6 @@ input[type=checkbox]:checked ~ #menu{display: block;}
 
 .column {display:inline-block; margin-bottom: 16px; padding: 0 8px;}
 
-
 @media only screen and (max-width : 650px){
     ul {position: static;display:none;}
     ul, li {width: 100%;}
