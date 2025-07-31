@@ -1,0 +1,14 @@
+   <div style="text-align:center;position:absolute;bottom:0;width:100%;height:20%">
+            <p style="margin:0px;background-color:grey;padding:10px 0px">Desliza hacia abajo para aprender de nuestros servicios <img src="scroll_down.png" style="height:20px;background-color:grey;"/>   </p>
+                 
+            <p style="margin:0px;text-align:center;background-color: #333333;color: #ffffff;padding:10px"> BOAchem: Beauty Of Analytics & Chemistry | Juntos hacemos ciencia. </p>
+    </div>
+
+
+
+    <div id="menu" style="background-color:#e9eaea;top:0">
+    </div>
+
+;position:sticky;
+
+<div style="position:sticky;top:0;">
