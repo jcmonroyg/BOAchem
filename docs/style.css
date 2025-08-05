@@ -93,6 +93,7 @@ input[type=checkbox]:checked ~ #menu{display: block;}
     #outer {width:100%;}
     #inn1 {width:100%;  display:block}
     #inn2 {width:100%;  display:block}
+    p {padding-right:15px;padding-left:15px;}
     
 }
 
