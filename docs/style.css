@@ -11,6 +11,8 @@ body, html {margin: 0px;height:100%;}
 ul {list-style-type:none;  margin:0;
     padding:0;             position: relative;z-index:100;}
 
+p {line-height:25px;}
+
 li {display:inline-block; float: left ;z-index:100;}
 
 /*Style for menu links*/
@@ -56,9 +58,10 @@ input[type=checkbox]:checked ~ #menu{display: block;}
 
 .box_w_background002 {display:inline-block;padding:5px;}
 
-#coolbox {background-color: rgb(255,255,255,0.6); padding:20px;text-align:left;margin-bottom: 6px;bottom:10%;}
-#coolbox_red {background-color: rgb(255,0,0,0.8); padding:15px;text-align:left;margin-bottom: 6px;border-radius: 12px;}
-#coolbox_red:hover { background-color: #016946; color:white;}
+#coolbox {background-color: rgb(255,255,255,0.8); padding:20px;text-align:left;margin-bottom: 6px;bottom:10%;}
+#coolbox_red_1 {background-color:#016946 ; padding:15px;text-align:left;margin-bottom: 6px;border-radius: 12px;}
+#coolbox_red {background-color:#016946 ; padding:15px;text-align:left;margin-bottom: 6px;border-radius: 12px;}
+#coolbox_red:hover { background-color: rgb(255,0,0,0.8); color:white;bottom: 10%;}
 
 .cuatro {  width: 400px;}
 .dos {width:600px}
@@ -94,6 +97,7 @@ input[type=checkbox]:checked ~ #menu{display: block;}
     #inn1 {width:100%;  display:block}
     #inn2 {width:100%;  display:block}
     p {padding-right:15px;padding-left:15px;}
+    #coolbox_red {position:absolute;bottom:10%;margin-left:10px;color:white;text-decoration:none;font-size:60px;}
     
 }
 
