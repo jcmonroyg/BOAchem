@@ -59,7 +59,12 @@ input[type=checkbox]:checked ~ #menu{display: block;}
 .box_w_background002 {display:inline-block;padding:5px;}
 
 #coolbox {background-color: rgb(255,255,255,0.8); padding:20px;text-align:left;margin-bottom: 6px;bottom:10%;}
-#coolbox_red_1 {background-color:#016946 ; padding:15px;text-align:left;margin-bottom: 6px;border-radius: 12px;}
+#coolbox_red_whatsapp_p {background-color:#016946 ; padding:15px;text-align:left;margin-bottom: 6px;border-radius: 12px;}
+#coolbox_red_whatsapp_p:hover { background-color: rgb(255,0,0,0.8); color:white;bottom: 10%;}
+
+#coolbox_red_w {position:absolute;bottom:40%;color:white;text-decoration:none;background-color:#016946 ; padding:15px;text-align:right;margin-bottom: 6px;border-radius: 12px;margin-left:-300px;font-size:30px;}
+#coolbox_red_w:hover { background-color: rgb(255,0,0,0.8); color:white;}
+
 #coolbox_red {background-color:#016946 ; padding:15px;text-align:left;margin-bottom: 6px;border-radius: 12px;}
 #coolbox_red:hover { background-color: rgb(255,0,0,0.8); color:white;bottom: 10%;}
 
@@ -76,6 +81,7 @@ input[type=checkbox]:checked ~ #menu{display: block;}
 .column {display:inline-block; margin-bottom: 16px; padding: 0 8px;}
 
 .portada_2nd {height:50%;background-size: 100%;}
+.portada_2nd_ {height:50%;background-size: 100%;}
 .portada {min-height:600px;background-size: cover;}
 #outer {width:70%;}
 #inn1 {width:30%;  display:inline-block;padding-top:30px;padding-bottom:30px;}
@@ -90,6 +96,7 @@ input[type=checkbox]:checked ~ #menu{display: block;}
     .box_w_background {font-size:12px;}
 	.box_w_background002 { width: 100%; display: block;}
     .portada_2nd {height:300px;background-size: cover;}
+    .portada_2nd_ {height:30%;background-size: 100%;}
     .portada {min-height:300px;}
     ul li a:hover + .hidden, .hidden:hover {display: none;}
     #menu {position:fixed;z-index:2999;}
@@ -97,7 +104,7 @@ input[type=checkbox]:checked ~ #menu{display: block;}
     #inn1 {width:100%;  display:block}
     #inn2 {width:100%;  display:block}
     p {padding-right:15px;padding-left:15px;}
-    #coolbox_red {position:absolute;bottom:10%;margin-left:10px;color:white;text-decoration:none;font-size:60px;}
+    #coolbox_red_w {position:absolute;bottom:10%;margin-left:10px;color:white;text-decoration:none;font-size:60px;}
     
 }
 
