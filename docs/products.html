@@ -22,8 +22,9 @@
   background-repeat: no-repeat;
   padding: 0px;
   margin: 0px;
-  height: 95vh;
+  height: auto;
   width: 100%;
+    
 }
 
 .fixed {
@@ -53,9 +54,9 @@ html, body {
 
 .text-block {
   width:40%;
-  position: absolute;
+  position: relative;
   bottom: 0%;
-  right: 5%;
+  left: 50%;
   /* background: rgba(0, 0, 0, 0.5); Black background with 0.5 opacity */
   color: black;
   padding-left: 20px;
@@ -116,25 +117,11 @@ h1, h3, h4 {
 
 
 @media screen and (max-width: 768px) {
-.text-block {
-  width:90%;
-  bottom: 0%;
-  right: 5%;
-padding-left: 10px;
-  padding-right: 10px;
-}
 
-.fixed {
-  width: 30%;
-}
-
-.container {
-  height: 90vh;
-}
 
 .text-block_img {
   width:90%;
-  position: absolute;
+  position: relative;
   top: 2%;
   right: 5%;
   background: rgb(255, 255, 255,0.5);
@@ -142,7 +129,30 @@ padding-left: 10px;
   padding-left: 10px;
   padding-right: 10px;
   text-align:center;
+   display:block;
 }
+
+
+.text-block {
+  width:90%;
+left:auto;
+margin:4%;
+
+padding-left: 10px;
+  padding-right: 10px;
+display:block;
+
+}
+
+.fixed {
+  width: 30%;
+}
+
+.container {
+  height: auto;
+}
+
+
 
 .imagen_apoyo {
 	  height:200px;
