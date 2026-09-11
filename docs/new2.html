@@ -29,9 +29,18 @@ html {
   background-color: #2980B9;
 }
 
+
+
+.media_search { position:sticky;
+    margin-left:10%;
+    padding:5px;
+top:0px;
+        }
+
 .dropdown {
-  position: fixed;
+  position: sticky;
   display: inline-block;
+    top:0px;
 }
 
 .dropdown-content {
@@ -92,11 +101,12 @@ h2, p {
 
 .chem_inside{width:100%}
 
-.media_search {margin-left:15%;}
+
 
 @media (max-width:768px)
 {
-	.media_search {margin-left:40%;}
+	.media_search {margin-left:25%;top:50px;}
+    .dropdown{top:50px;}
 
 
 .item_container {width:100%;}
@@ -206,74 +216,24 @@ h2, p {
 
 
 
+<div class="portada" style="background-image:url('imagenes/glosario.jpg');background-attachment: fixed;width:100%;background-position: center;position:relative;">
+    <h4 id="coolbox" style="position:absolute; left:40px;"> Glosario: Maravillas de la Naturaleza <br>
+    BOAchem te invita a aprender </h4>
 
 
+</div>
 
 
+<div class="dropdown">
+  <button id="toggle-btn" class="dropbtn">Listado</button>
+</div>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<div  class="portada" style="background-image:url('imagenes/glosario.jpg');background-size:cover;height:400px;padding:0px;margin:0px; "  >
-
-	<div style="background-color:rgb(225,225,255,0.9);witdh:50%;" >
-		<h1> Glosario: Maravillas de la Naturaleza </h1>
-		<h2> BOAchem te invita a aprender<br></> <br>
-	</div>
-
-
-
-<div class="dropdown" style="padding:10px;">
-            <button onclick="myFunction()" class="dropbtn"> Listado </button>
-            <div id="myDropdown" class="dropdown-content">
-                            <select size="15" style='display:block;'>
-                                    	<option value= "#aceite_38" > TEST Aceite esencial de Abeto balsámico </option>
-                                        <option <a href="#aceite_1"> TEST 2 Aceite esencial de Abeto balsámico </a> </option>
-                                        <option> <a href="#aceite_2"> Aceite esencial de Abeto Douglas </a> </option>
-                                         <option> <a href="#aceite_3"> Aceite esencial de Abeto negro </a> </option>
-                                         <option> <a href="#aceite_4"> Aceite esencial de Abeto plateado </a> </option> 
-                                          <option>  <a href="#aceite_inf"> Por descubrir ... </a> </option>
-                                          <option> Por descubrir ... </option>
-                            </select>
-            </div>
+<!-- Container for the Navigation List (Hidden by default) -->
+<div id="menu-container" style="display: none;">
+  <ul class="menu-list" style="list-style: none; padding: 0;">
+    <li><button class="nav-link" data-target="#section-one">Go to Section 1</button></li>
+    <li><button class="nav-link" data-target="#section-two">Go to Section 2</button></li>
+  </ul>
 </div>
 
 
@@ -281,173 +241,21 @@ h2, p {
 
 
 
-<label class="media_search" for="choice"  style='display:block;padding:10px;'  > </label>
-<input class="media_search" type="text" id="redirect-input" list="huge-list" name="choice" placeholder="Busqueda ..."    style='display:block;'>
-
-<datalist id="huge-list" >
-	<option  value="#aceite_inf" > Por descubrir ...  </option>
+    <div style='padding:10px;'>        <label class="media_search" for="choice"  style='display:inline-block;padding:10px;'  > </label>  </div>
+            <input class="media_search" type="text" id="redirect-input" list="huge-list" name="choice" placeholder="Busqueda ..."    style='display:block;'>
+            <datalist id="huge-list" >
 	<option value= "#aceite_0" > Absoluto de Semillas de Abelmosco </a> </option> 
  <option value= "#aceite_1" > Aceite esencial de Abeto balsámico </a> </option> 
  <option value= "#aceite_2" > Aceite esencial de Abeto Douglas </a> </option> 
- <option value= "#aceite_3" > Aceite esencial de Abeto negro </a> </option> 
- <option value= "#aceite_4" > Aceite esencial de Abeto plateado </a> </option> 
- <option value= "#aceite_5" > Aceite esencial de Abeto siberiano </a> </option> 
- <option value= "#aceite_6" > Aceite esencial de Albahaca </a> </option> 
- <option value= "#aceite_7" > Aceite esencial de Albahaca Sagrada </a> </option> 
- <option value= "#aceite_8" > Aceite esencial de Alcanfor blanco </a> </option> 
- <option value= "#aceite_9" > Aceite esencial de Anís </a> </option> 
- <option value= "#aceite_10" > Aceite esencial de Anís estrellado </a> </option> 
- <option value= "#aceite_11" > Aceite esencial de Árbol de té de limón </a> </option> 
- <option value= "#aceite_12" > Aceite esencial del Árbol del Té </a> </option> 
- <option value= "#aceite_13" > Aceite esencial de Bálsamo de Copaiba </a> </option> 
- <option value= "#aceite_14" > Aceite esencial de Bálsamo de Gurjum </a> </option> 
- <option value= "#aceite_15" > Aceite esencial de Bálsamo del Perú </a> </option> 
- <option value= "#aceite_16" > Aceite esencial de Bayrum </a> </option> 
- <option value= "#aceite_17" > Absoluto de Benjuí </a> </option> 
- <option value= "#aceite_18" > Aceite esencial de Bergamota </a> </option> 
- <option value= "#aceite_19" > Absoluto de Boronia </a> </option> 
- <option value= "#aceite_20" > Aceite esencial de Café, absoluto de café y extracto de CO2 de café </a> </option> 
- <option value= "#aceite_21" > Aceite esencial de Cajeput </a> </option> 
- <option value= "#aceite_22" > Aceite esencial de Cananga </a> </option> 
- <option value= "#aceite_23" > Aceite esencial de Canela </a> </option> 
- <option value= "#aceite_24" > Aceite esencial de Canela cassia </a> </option> 
- <option value= "#aceite_25" > Aceite esencial de Cáñamo </a> </option> 
- <option value= "#aceite_26" > Aceite esencial de Cardamomo </a> </option> 
- <option value= "#aceite_27" > Aceite esencial de madera de Cedro de Virginia </a> </option> 
- <option value= "#aceite_28" > Aceite esencial de Cedro del Atlas </a> </option> 
- <option value= "#aceite_29" > Aceite esencial de Cilantro </a> </option> 
- <option value= "#aceite_30" > Aceite esencial de Ciprés </a> </option> 
- <option value= "#aceite_31" > Aceite esencial de Ciprés azul </a> </option> 
- <option value= "#aceite_32" > Aceite esencial de Citronela </a> </option> 
- <option value= "#aceite_33" > Aceite esencial de Clavo de olor </a> </option> 
- <option value= "#aceite_34" > Aceite esencial de Comino </a> </option> 
- <option value= "#aceite_35" > Aceite esencial de Davana </a> </option> 
- <option value= "#aceite_36" > Aceite esencial de Elemi </a> </option> 
- <option value= "#aceite_37" > Aceite esencial de Enebro </a> </option> 
- <option value= "#aceite_38" > Aceite esencial de Enebro de Miera </a> </option> 
- <option value= "#aceite_39" > Aceite esencial de Eneldo </a> </option> 
- <option value= "#aceite_40" > Aceite esencial de Ericifolia Australiana </a> </option> 
- <option value= "#aceite_41" > Aceite esencial de Eucalipto (Eucalyptus Globulus) </a> </option> 
- <option value= "#aceite_42" > Aceite esencial de Eucalipto citriodora </a> </option> 
- <option value= "#aceite_43" > Aceite esencial de Eucalipto Radiata </a> </option> 
- <option value= "#aceite_44" > Aceite esencial de Fragonia </a> </option> 
- <option value= "#aceite_45" > Aceite esencial de Gálbano </a> </option> 
- <option value= "#aceite_46" > Aceite esencial de Gaulteria </a> </option> 
- <option value= "#aceite_47" > Aceite esencial de Geranio </a> </option> 
- <option value= "#aceite_48" > Aceite esencial de Geranio rosa </a> </option> 
- <option value= "#aceite_49" > Aceite esencial de Helicriso </a> </option> 
- <option value= "#aceite_50" > Aceite esencial de Helicriso de Madagascar </a> </option> 
- <option value= "#aceite_51" > Aceite esencial de Lemongrass </a> </option> 
- <option value= "#aceite_52" > Aceite esencial de Hierba gatera </a> </option> 
- <option value= "#aceite_53" > Aceite esencial de Hierbabuena </a> </option> 
- <option value= "#aceite_54" > Aceite esencial de Hinojo </a> </option> 
- <option value= "#aceite_55" > Aceite esencial de Hinoki </a> </option> 
- <option value= "#aceite_56" > Aceite esencial de Hisopo </a> </option> 
- <option value= "#aceite_57" > Aceite esencial de Hoja de laurel </a> </option> 
- <option value= "#aceite_58" > Aceite esencial Hong Kuai </a> </option> 
- <option value= "#aceite_59" > Aceite esencial Frankincienso </a> </option> 
- <option value= "#aceite_60" > Aceite esencial de jara </a> </option> 
- <option value= "#aceite_61" > Absoluto de Jazmin </a> </option> 
- <option value= "#aceite_62" > Aceite esencial de Jengibre </a> </option> 
- <option value= "#aceite_63" > Aceite esencial de Kanuka </a> </option> 
- <option value= "#aceite_64" > Aceite esencial de Kunzea </a> </option> 
- <option value= "#aceite_65" > Aceite esencial de Lavanda </a> </option> 
- <option value= "#aceite_66" > Aceite esencial de Espliego </a> </option> 
- <option value= "#aceite_67" > Aceite esencial de Lavandín </a> </option> 
- <option value= "#aceite_68" > Aceite esencial de Lima </a> </option> 
- <option value= "#aceite_69" > Aceite esencial de Limón </a> </option> 
- <option value= "#aceite_70" > Aceite esencial de Lúpulo </a> </option> 
- <option value= "#aceite_71" > Aceite esencial de Madera Ho </a> </option> 
- <option value= "#aceite_72" > Aceite esencial de Mandarina </a> </option> 
- <option value= "#aceite_73" > Aceite esencial Mandravasarotra </a> </option> 
- <option value= "#aceite_74" > Aceite esencial de Manuka </a> </option> 
- <option value= "#aceite_75" > Aceite esencial de Manzanilla Alemana </a> </option> 
- <option value= "#aceite_76" > Aceite esencial de Manzanilla Romana </a> </option> 
- <option value= "#aceite_77" > Aceite esencial de May Chang </a> </option> 
- <option value= "#aceite_78" > Aceite esencial de Mejorana </a> </option> 
- <option value= "#aceite_79" > Aceite esencial de Melisa </a> </option> 
- <option value= "#aceite_80" > Aceite esencial de Menta Piperita </a> </option> 
- <option value= "#aceite_81" > Aceite esencial de Menta arvensis </a> </option> 
- <option value= "#aceite_82" > Aceite esencial de Menta de Bergamota </a> </option> 
- <option value= "#aceite_83" > Aceite esencial de Menta de Chocolate </a> </option> 
- <option value= "#aceite_84" > Aceite esencial de Milenrama </a> </option> 
- <option value= "#aceite_85" > Aceite esencial de Mirra </a> </option> 
- <option value= "#aceite_86" > Aceite esencial de Mirra Dulce </a> </option> 
- <option value= "#aceite_87" > Aceite esencial de Mirto </a> </option> 
- <option value= "#aceite_88" > Aceite esencial de Mirto limón </a> </option> 
- <option value= "#aceite_89" > Absoluto de Musgo de roble </a> </option> 
- <option value= "#aceite_90" > Aceite esencial de Naranja amarga </a> </option> 
- <option value= "#aceite_91" > Aceite esencial de Naranja dulce </a> </option> 
- <option value= "#aceite_92" > Aceite esencial de Naranja sanguina </a> </option> 
- <option value= "#aceite_93" > Absoluto de Nardo </a> </option> 
- <option value= "#aceite_94" > Aceite esencial de Nardo Jatamansi </a> </option> 
- <option value= "#aceite_95" > Aceite esencial de Neroli </a> </option> 
- <option value= "#aceite_96" > Aceite esencial de Niaouli </a> </option> 
- <option value= "#aceite_97" > Aceite esencial de Nuez moscada </a> </option> 
- <option value= "#aceite_98" > Aceite esencial de Orégano </a> </option> 
- <option value= "#aceite_99" > Aceite esencial de Pachuli </a> </option> 
- <option value= "#aceite_100" > Aceite esencial de Palmarosa </a> </option> 
- <option value= "#aceite_101" > Aceite esencial de Palo de rosa </a> </option> 
- <option value= "#aceite_102" > Aceite esencial de Palo Santo </a> </option> 
- <option value= "#aceite_103" > Aceite esencial de Petitgrain </a> </option> 
- <option value= "#aceite_104" > Aceite esencial Pimienta de Cubeba </a> </option> 
- <option value= "#aceite_105" > Aceite esencial de Pimienta de Jamaica </a> </option> 
- <option value= "#aceite_106" > Aceite esencial de Pimienta Negra </a> </option> 
- <option value= "#aceite_107" > Aceite esencial de Pimienta rosa </a> </option> 
- <option value= "#aceite_108" > Aceite esencial de Pino piñonero </a> </option> 
- <option value= "#aceite_109" > Aceite esencial de Pino silvestre </a> </option> 
- <option value= "#aceite_110" > Aceite esencial de Plái </a> </option> 
- <option value= "#aceite_111" > Aceite esencial de Pomelo </a> </option> 
- <option value= "#aceite_112" > Aceite esencial de Raíz de Angélica </a> </option> 
- <option value= "#aceite_113" > Aceite esencial de Ravensara Aromático </a> </option> 
- <option value= "#aceite_114" > Aceite esencial de Ravintsara </a> </option> 
- <option value= "#aceite_115" > Aceite esencial de rododendro </a> </option> 
- <option value= "#aceite_116" > Aceite esencial de Romero </a> </option> 
- <option value= "#aceite_117" > Aceite esencial de Rosa Damascena </a> </option> 
- <option value= "#aceite_118" > Aceite esencial de Salvia Real </a> </option> 
- <option value= "#aceite_119" > Aceite esencial de salvia blanca </a> </option> 
- <option value= "#aceite_120" > Aceite esencial de Salvia España </a> </option> 
- <option value= "#aceite_121" > Aceite esencial de Salvia Romana </a> </option> 
- <option value= "#aceite_122" > Aceite esencial de Sándalo </a> </option> 
- <option value= "#aceite_123" > Aceite esencial de Sándalo Amyris </a> </option> 
- <option value= "#aceite_124" > Aceite esencial de Semillas de Alcaravea </a> </option> 
- <option value= "#aceite_125" > Aceite esencial de Perejil </a> </option> 
- <option value= "#aceite_126" > Aceite esencial de Semilla de Zanahoria </a> </option> 
- <option value= "#aceite_127" > Absoluto de Tabaco </a> </option> 
- <option value= "#aceite_128" > Aceite esencial de Tagete </a> </option> 
- <option value= "#aceite_129" > Aceite esencial de Tanaceto azul </a> </option> 
- <option value= "#aceite_130" > Aceite esencial de Tangerina </a> </option> 
- <option value= "#aceite_131" > Absoluto de Flor de Tilo </a> </option> 
- <option value= "#aceite_132" > Aceite esencial de Tomillo </a> </option> 
- <option value= "#aceite_133" > Aceite esencial de Tsuga del Canadá </a> </option> 
- <option value= "#aceite_134" > Absoluto de Vainilla, Extracto de Vainilla CO2 y Oleorresina de Vainilla </a> </option> 
- <option value= "#aceite_135" > Aceite esencial de valeriana </a> </option> 
- <option value= "#aceite_136" > Aceite esencial de vara de oro </a> </option> 
- <option value= "#aceite_137" > Aceite esencial de Vetiver </a> </option> 
- <option value= "#aceite_138" > Absoluto de hoja de violeta </a> </option> 
- <option value= "#aceite_139" > Aceite esencial de Zanthoxylum </a> </option> 
- <option value= "#aceite_140" > Aceite esencial de Ylang Ylang </a> </option> 
- <option value= "#aceite_141" > Aceite esencial de Yuzu </a> </option> 
  
-	<option  value="#aceite_inf" > Por descubrir ...  </option>
-</datalist>
- 
-</div>
+            </datalist>
 
 
 
 
 
 
-
-
-
-
-
-
-
-
-
+    
 <br>
 <div id='aceite_0' class="item_container">
 <h2>Absoluto de Semillas de Abelmosco <i>( Abelmoschus moschatus / Hibiscus abelmoschus
@@ -509,6 +317,8 @@ Varias fuentes mencionan que el Absoluto de Semillas de Abelmosco también puede
 <div style = "background-color:black; height:10px;" >  </div>
 
 </div> 
+
+
 
 
 
@@ -9975,6 +9785,8 @@ El Aceite Esencial de Yuzu es un cítrico. Puede aprender más sobre los cítric
 
 
 
+
+
     <div style="position:relative;bottom:0;width:100%;"> 
         <div style="text-align:center;padding:10px;background-color:#e9eaea;color:black;" >
             <p style="margin:0px;">BOAchem: Beauty Of Analytics & Chemistry | Juntos en la ciencia. </p>
@@ -9994,25 +9806,17 @@ El Aceite Esencial de Yuzu es un cítrico. Puede aprender más sobre los cítric
 
 
 <script>
-/* When the user clicks on the button, 
-toggle between hiding and showing the dropdown content */
-function myFunction() {
-  document.getElementById("myDropdown").classList.toggle("show");
-}
 
-// Close the dropdown if the user clicks outside of it
-window.onclick = function(event) {
-  if (!event.target.matches('.dropbtn')) {
-    var dropdowns = document.getElementsByClassName("dropdown-content");
-    var i;
-    for (i = 0; i < dropdowns.length; i++) {
-      var openDropdown = dropdowns[i];
-      if (openDropdown.classList.contains('show')) {
-        openDropdown.classList.remove('show');
-      }
-    }
+// 1. Toggle Menu Visibility
+document.addEventListener('click', function(event) {
+  if (event.target && event.target.id === 'toggle-btn') {
+    const container = document.getElementById('menu-container');
+    container.style.display = (container.style.display === 'none' || container.style.display === '') ? 'block' : 'none';
   }
-}
+});
+
+// 2. Instant Navigation on Link Click
+document.addEventListener('click'
 
 
 document.getElementById('redirect-input').addEventListener('input', function(e) {
