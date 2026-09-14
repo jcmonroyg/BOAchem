@@ -131,85 +131,8 @@ h2, p {
 </head>
 <body>
 
-  <label for="show-menu" class="show-menu" style="height:40px;text-align:left;">
-    <a href="index.html" style="padding:0px;margin:0px;">    <img src="LOGO times.bmp" style="height:40px;" /> </a> <img src="menu.svg" style="height:40px;"></label>
-    <input type="checkbox" id="show-menu" role="button">
+<div id="nav-menu"></div>
 
-<div style= "position:absolute;width:100%;height:40px;background-color:#e9eaea;z-index:-100;text-align:center;font-size:12px;"> <p>BOAchem: Beauty Of Analytics & Chemistry</p> </div>
-
-    <ul>
-                <li style="padding:0px;margin:0px;" >
-                  <a href="index.html" style="padding:0px;margin:1px;">    <img src="LOGO times.bmp" style="height:40px;style="padding:0px;margin:0px;" />    </a>
-                </li>
-    </ul>
-
-        <ul id="menu">
-                <li >
-                  <a href="index.html"    > Inicio</a>
-                </li>
-
-                <li >
-                  <a href="somos.html" > Quienes Somos</a>
-                  <ul class="hidden">
-                    <li><a href="somos.html#vision ">Misión</a></li>
-                    <li><a href="somos.html#mision ">Visión</a></li>
-                    <li><a href="somos.html#equipo ">Nuestro equipo</a></li>
-                  </ul>
-                </li>
-
-                <li >
-                  <a href="consulting.html" > Consultoría </a>
-                  <ul class="hidden">
-                    <li><a href="consulting.html#farma">Farmacéutica</a></li>
-		            <li><a href="consulting.html#ambiental">Ambiental</a></li>
-                    <li><a href="consulting.html#alimentos">Alimentos</a></li>
-                    <li><a href="consulting.html#fq">Fisicoquímica</a></li>
-                    <li><a href="consulting.html#crom">Cromatografía</a></li>
-		            <li><a href="consulting.html#val">Validaciones</a></li>
-                    <li><a href="consulting.html#audit">Auditoria</a></li>
-                  </ul>
-                </li>
-
-                <li >
-                  <a href="products.html" > Productos </a>
-                  <ul class="hidden">
-                    <li><a href="products.html#oils">Aceites Esenciales</a></li>
-                    <li><a href="products.html#hidrolatos"> Hidrolatos </a></li>
-                    <li><a href="products.html#extractos"> Extractos </a></li>
-                  </ul>
-                </li>
-
-                <li >
-                  <a href="hidro.html"  > Hidrodestilación </a>
-                  <ul class="hidden">
-                    <li><a href="hidro.html#hidro">Fermentación </a></li>
-                    <li><a href="hidro.html#fermen">Servicios </a></li>
-                  </ul>
-                </li>
-
-                <li >
-                  <a href="python.html" > Automatización digital</a>
-                  <ul class="hidden">
-                    <li><a href="python.html#excel">EXCEL</a></li>
-                    <li><a href="python.html#vba">MAKROS VBA</a></li>
-                    <li><a href="python.html#python">Python</a></li>
-                  </ul>
-                </li>
-
-                <li >
-                  <a href="geo.html" > Geoestadística</a>
-                  <ul class="hidden">
-                    <li><a href="geo.html#mapas">Mapas de contorno</a></li>
-                    <li><a href="geo.html#explora">Exploración</a></li>
-                    <li><a href="geo.html#contaminacion">Plumas de contaminación</a></li>
-                  </ul>
-                </li>
-
-                <li >
-                  <a href="contacme.html"  > Contáctanos </a>
-                </li>
-
-        </ul>
  <!--TERMINA EL WELLCOME + index-->
 
 <div> <!--EMPIEZA EL CONTENIDO REGULAR DEL DOCUMENTO: HEADER, CONTENT, FOODER-->
@@ -224,25 +147,8 @@ h2, p {
 </div>
 
 
-<div class="dropdown">
-  <button id="toggle-btn" class="dropbtn">Listado</button>
-</div>
-
-<!-- Container for the Navigation List (Hidden by default) -->
-<div id="menu-container" style="display: none;">
-  <ul class="menu-list" style="list-style: none; padding: 0;">
-    <li><button class="nav-link" data-target="#section-one">Go to Section 1</button></li>
-    <li><button class="nav-link" data-target="#section-two">Go to Section 2</button></li>
-  </ul>
-</div>
-
-
-
-
-
-
     <div style='padding:10px;'>        <label class="media_search" for="choice"  style='display:inline-block;padding:10px;'  > </label>  </div>
-            <input style="width: 300px;" class="media_search" type="text" id="redirect-input" list="huge-list" name="choice" placeholder="Busqueda ..."    style='display:block;'>
+            <input class="media_search" type="text" id="redirect-input" list="huge-list" name="choice" placeholder="Busqueda ..." style='display:block;width:300px;'> <br>
             <datalist id="huge-list" >
 	<option value= "#aceite_0" > Absoluto de Semillas de Abelmosco </a> </option> 
  <option value= "#aceite_1" > Aceite esencial de Abeto balsámico </a> </option> 
@@ -9953,8 +9859,6 @@ document.addEventListener('click', function(event) {
   }
 });
 
-// 2. Instant Navigation on Link Click
-document.addEventListener('click'
 
 
 document.getElementById('redirect-input').addEventListener('input', function(e) {
@@ -9964,9 +9868,15 @@ document.getElementById('redirect-input').addEventListener('input', function(e) 
       window.location.href = e.target.value;
     }
   });
+</script>
 
-
-
+<script>
+  fetch('/menu.html')
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById('nav-menu').innerHTML = data;
+    })
+    .catch(error => console.error('Error loading the menu:', error));
 </script>
 
 
