@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Image & Audio</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap">
+  <style>
+    :root {
+      --bg:      #F2F4F8;
+      --surface: #FFFFFF;
+      --border:  #DDE1EA;
+      --text:    #1C1F26;
+      --muted:   #6B7380;
+      --accent:  #4A6CF7;
+      --radius:  12px;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg:      #111318;
+        --surface: #1C1F26;
+        --border:  #2C303C;
+        --text:    #E8EAF0;
+        --muted:   #8A8F9E;
+        --accent:  #6A8BFF;
+      }
+    }
+
+    *, *::before, *::after {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Inter', system-ui, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 2rem 1rem;
+	flex-direction: column;
+    }
+
+    img {
+      max-width: 100%;
+    }
+
+    .card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      display: flex;
+      flex-direction: column;
+      max-width: 780px;
+      width: 100%;
+      overflow: hidden;
+      box-shadow: 0 2px 16px rgba(0, 0, 0, .06);
+    }
+
+    /* Image panel — full width */
+    .image-panel {
+      width: 100%;
+      height: auto;
+      background: var(--border);
+      flex-shrink: 0;
+    }
+
+    .image-panel img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    /* Audio panel */
+    .audio-panel {
+      padding: 0px;
+      display: flex;
+      flex-direction: column;
+      gap: 0px;
+    }
+
+    .label {
+      font-size: 0.7rem;
+      font-weight: 600;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      color: var(--accent);
+    }
+
+    .title {
+      font-size: 1.25rem;
+      font-weight: 600;
+      line-height: 1.35;
+      margin: 0;
+    }
+
+    .description {
+      font-size: 0.875rem;
+      color: var(--muted);
+      line-height: 1.6;
+      margin: 0;
+    }
+
+    .player-wrap {
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 1rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+    }
+
+    .file-name {
+      font-size: 0.8rem;
+      color: var(--muted);
+      font-weight: 500;
+    }
+
+    audio {
+      width: 100%;
+      height: 36px;
+      accent-color: var(--accent);
+    }
+  </style>
+</head>
+<body>
+
+@html
+
+</body>
+</html>
