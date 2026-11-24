@@ -1,15 +1,23 @@
 ﻿<!DOCTYPE html>
-<html>
+<html lang="es">
 <head>
+<meta charset="UTF-8">
+<title>Aceites Esenciales en Colombia: Lavanda, Citronela, Orégano, Romero | BOAchem</title>
+<meta name="description" content="Aceites esenciales destilados por arrastre de vapor, con certificado de análisis (COA). También alcohol etílico USP, glicerina USP e hidrolatos. Envíos en Colombia.">
+<link rel="canonical" href="https://boachem.com/products.html">
+<link rel="icon" href="/favicon.ico">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="es_CO">
+<meta property="og:site_name" content="BOAchem">
+<meta property="og:title" content="Aceites Esenciales en Colombia: Lavanda, Citronela, Orégano, Romero | BOAchem">
+<meta property="og:description" content="Aceites esenciales destilados por arrastre de vapor, con certificado de análisis (COA). También alcohol etílico USP, glicerina USP e hidrolatos. Envíos en Colombia.">
+<meta property="og:url" content="https://boachem.com/products.html">
+<meta property="og:image" content="https://boachem.com/LOGO.jpg">
 
-<title> BOAchem </title>
 <link rel="stylesheet" href="style.css">
 <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
 <meta http-equiv="Pragma" content="no-cache">
 <meta http-equiv="Expires" content="0">
-<meta name="description" content="analisis quimicos e investigacion">
-<meta charset="UTF-8">
-<meta name="keywords" content="Bogota, Bogotá, bogota, analisis, químico, química, analitica, analítica, quimiometria, geoestadistica, estadistica, análisis,Colombia, colombia, PCA, belleza, consultoria">
 <meta name="author" content="Camilo M.">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -35,17 +43,28 @@
     flex:1;
 }
 
-.fixed {
+/* Botones flotantes: WhatsApp + carrito (mismo ícono que tienda.html: icono-carrito.svg) */
+.fab-stack {
   position: fixed;
-  bottom: 10%;
-  right: 10%;
-  width: 10%;
-  /* height: 200px; */
-  border: 0px solid #ad217e;
-  z-index: 9999; 
-  background-color: rgb(8, 8, 8,0.5);
-  padding:1%;
+  right: 1.25rem;
+  bottom: calc(1.25rem + env(safe-area-inset-bottom, 0px));
+  z-index: 9999;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
 }
+.fab {
+  width: 58px; height: 58px;
+  border-radius: 50%;
+  display: grid; place-items: center;
+  text-decoration: none;
+  transition: transform 0.15s;
+}
+.fab:hover { transform: translateY(-2px) scale(1.04); }
+.fab-wa { background: #25D366; color: #fff; box-shadow: 0 6px 18px rgba(37, 211, 102, 0.35); }
+.fab-wa svg { width: 30px; height: 30px; }
+.fab-cart { box-shadow: 0 6px 18px rgba(225, 29, 46, 0.35); }
+.fab-cart img { width: 100%; height: 100%; display: block; border-radius: 50%; }
 
 
 html, body {
@@ -53,11 +72,59 @@ html, body {
     padding: 0;
 }
 
+/* Botones de documentos (COA, Usos/Características, etc.) */
+.pdf_container {
+  display: inline-block;
+  margin: 0 8px 12px 0;
+}
+
+.pdf_container a {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 16px 8px 12px;
+  border: 1px solid #d5dbe0;
+  border-radius: 999px;
+  background: #fff;
+  color: #2b2b2b;
+  text-decoration: none;
+  font-family: Arial, sans-serif;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.06);
+  transition: background 0.2s, border-color 0.2s, box-shadow 0.2s, transform 0.2s;
+}
+
+.pdf_container a[href]:hover {
+  background: #eef8f3;
+  border-color: #016946;
+  box-shadow: 0 4px 10px rgba(1,105,70,0.15);
+  transform: translateY(-1px);
+}
+
+/* Documentos aún no disponibles (enlace sin href) */
+.pdf_container a:not([href]) {
+  opacity: 0.45;
+  cursor: not-allowed;
+  box-shadow: none;
+}
+
+.img_pdf {
+  width: 20px !important;
+  height: 20px;
+  margin: 0 !important;
+  padding: 0 !important;
+  flex-shrink: 0;
+}
+
 .pdf {
+  margin: 0;
+  padding: 0 !important;
+  font-size: 14px;
+  font-weight: 600;
+}
 
-    margin-top: 0px;
-    margin-bottom: 10px;
-
+@media (max-width: 768px) {
+  .pdf_container { display: block; margin-right: 0; }
+  .pdf_container a { display: flex; width: 100%; box-sizing: border-box; padding: 12px 16px; }
 }
 
 .text-block {
@@ -98,13 +165,6 @@ h1, h3, h4 {
     margin-bottom: 0;
 }
 
-.pdf_container {
-  width:30%;
-}
-
-.img_pdf{
-  width: 50%;
-}
 
 .solid_back{
   height: 0%;
@@ -215,9 +275,7 @@ display:block;
 
 }
 
-.fixed {
-  width: 30%;
-}
+
 
 .container {
   height: auto;
@@ -277,7 +335,7 @@ display:block;
 
 </div>
 
-<h4 style="position:relative; left:40px;bottom:0%;">  Productos Naturales: Aceites Esenciales, Alcohol USP, Glicerina USP, Hidrolatos </h4>
+<h1 class="h1_like_h4" style="position:relative; left:40px;bottom:0%;"> Aceites Esenciales y Productos Naturales: Alcohol USP, Glicerina USP, Hidrolatos </h1>
 
 <div style="text-align:center">
   <span class="dot"></span> 
@@ -313,9 +371,9 @@ display:block;
 
 
 
-<div class="fixed">
-  <a href="https://wa.me/message/PDNFLRI43LFXJ1" target="_blank";>     <img src="products/wp.png" style="width:47%">     </a>
-  <a href="https://wa.me/message/PDNFLRI43LFXJ1" target="_blank";>     <img src="products/sc.png" style="width:47%">     </a>   
+<div class="fab-stack">
+  <a class="fab fab-wa" href="https://wa.me/573204126204?text=%5BWeb%5D%20Hola%20BOAchem%2C%20quiero%20informaci%C3%B3n%20sobre%20sus%20productos." target="_blank" rel="noopener" aria-label="Escríbenos por WhatsApp"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.2.6.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2-.1-.1-.3-.2-.5-.3Z"/></svg></a>
+  <a class="fab fab-cart" href="tienda.html" aria-label="Ir a la tienda"><img src="icono-carrito.svg" alt=""></a>
 </div>
 
 
@@ -327,7 +385,7 @@ display:block;
 
       <div class="text-block_img">
         <div style="width:100%; height:5px ; background-color:#0cc0df; margin-bottom:20px;">  </div>
-        <img src="products/alcohol.png" alt="Nature" style="width:60%;">
+        <img src="products/alcohol.webp" alt="Alcohol etílico 96% USP de origen vegetal" style="width:60%;">
       </div>
 
     </div>
@@ -339,13 +397,11 @@ display:block;
                     <h4> Contenido: 1 Galón (3,8 Litros) </h4>
                     <h4> Precio por unidad: $57.000 COP </h4> <br>
                         <div style="width: 100%";>
-                          <div class="pdf_container" style ="display:inline-block; " >
+                          <div class="pdf_container">
 
-                                    <a href="COAs/BOA2026-07-15-01 CoA.pdf" target="_blank";>         
-                                    <img class="img_pdf" src="pdf.png" alt="Nature"> 
-                                    </a>
-
-                                     <p class = "pdf"> COA (Certificado de Análisis) </p> </div>
+                                    <a href="COAs/BOA2026-07-15-01 CoA.pdf" target="_blank">         
+                                    <img class="img_pdf" src="pdf.png" alt="PDF"> <p class = "pdf"> COA (Certificado de Análisis) </p>
+                    </a> </div>
 
 
                                 <div style="width:100%; height:20px ; background-color:#0cc0df; margin-bottom:20px;">  </div>
@@ -368,7 +424,7 @@ display:block;
 <div class= "in-flex">
     <div class="text-block_img">
         <div style="width:100%; height:5px ; background-color:#0cc0df; margin-bottom:20px;">  </div>
-        <img src="products/glicerin.jpg" alt="Nature" style="width:60%;">
+        <img src="products/glicerin.webp" alt="Glicerina USP de origen vegetal" style="width:60%;">
     </div>
 </div>
 
@@ -379,13 +435,11 @@ display:block;
         <h4> Precio Galón (3,8 Litros): $85.000 COP </h4>
         <h4> Precio 1000 mL (1 Litro): $32.000 COP </h4> <br>
         <div style="width: 100%";>
-            <div class="pdf_container" style ="display:inline-block; " >
+            <div class="pdf_container">
 
-                    <a href="COAs/BOA2026-07-22-01 CoA.pdf" target="_blank";>         
-                    <img class="img_pdf" src="pdf.png" alt="Nature"> 
+                    <a href="COAs/BOA2026-07-22-01 CoA.pdf" target="_blank">         
+                    <img class="img_pdf" src="pdf.png" alt="PDF"> <p class = "pdf"> COA (Certificado de Análisis) </p>
                     </a>
-
-                     <p class = "pdf"> COA (Certificado de Análisis) </p>
             </div>
         </div>
         <div style="width:100%; height:20px ; background-color:#0cc0df; margin-bottom:20px;">  </div>
@@ -401,33 +455,33 @@ display:block;
 <div class= "in-flex">
       <div class="text-block_img">
         <div style="width:100%; height:5px ; background-color:#8c52ff; margin-bottom:20px;">  </div>
-        <img src="products/Lavanda.png" alt="Nature" style="width:100%;">
+        <img src="products/Lavanda.webp" alt="Aceite esencial de lavanda (Lavandula angustifolia) 10 mL" style="width:100%;">
       </div>
 </div>
 
 <div class= "in-flex">
   <div class="text-block">
   
-    <h2>Lavanda <i> (Lavandula angustifolia) </i></h2>
-    <div  class="imagen_apoyo" style="background-image:url('products/BOA Lavanda.jpg');" >  </div><br>   
+    <h2>Aceite esencial de Lavanda <i> (Lavandula angustifolia) </i></h2>
+    <div  class="imagen_apoyo" style="background-image:url('products/BOA Lavanda.webp');" >  </div><br>   
     <h4>Método de extracción: Destilación por arrastre de vapor</h4><br>
     <h4> Contenido: 10 mL </h4>
     <h4> Precio por unidad: $32.000 COP </h4>
     <h4> Precio por mayor: Contáctanos para mayor información. </h4> <br>
         <div style="width: 100%";>
-             <div class="pdf_container" style ="display:inline-block; " > 
-                    <a href="glosario.html#aceite_65" target="_blank";>
-                    <img class="img_pdf" src="pdf.png" alt="Nature"> <p class = "pdf"> Usos/Características </p> 
+             <div class="pdf_container"> 
+                    <a href="glosario.html#aceite_65" target="_blank">
+                    <img class="img_pdf" src="pdf.png" alt="PDF"> <p class = "pdf"> Usos/Características </p> 
                     </a>
             </div>
-            <div class="pdf_container" style ="display:inline-block; " > 
-                    <a  target="_blank";>
-                    <img class="img_pdf" src="pdf.png" alt="Nature"> <p class = "pdf"> COA (Certificado de Análisis) </p> 
+            <div class="pdf_container"> 
+                    <a  target="_blank">
+                    <img class="img_pdf" src="pdf.png" alt="PDF"> <p class = "pdf"> COA (Certificado de Análisis) </p> 
                     </a>
             </div>
-            <div class="pdf_container" style ="display:inline-block; " > 
-                    <a  target="_blank";>
-                    <img class="img_pdf" src="pdf.png" alt="Nature"> <p class = "pdf"> Información adicional </p> 
+            <div class="pdf_container"> 
+                    <a  target="_blank">
+                    <img class="img_pdf" src="pdf.png" alt="PDF"> <p class = "pdf"> Información adicional </p> 
                     </a>
             </div>
         </div>
@@ -454,34 +508,34 @@ display:block;
 
   <div class="text-block_img" >
     <div style="width:100%; height:5px ; background-color:#ffde59; margin-bottom:20px;">  </div>
-    <img src="products/Citronela.png" alt="Nature" style="width:100%;">
+    <img src="products/Citronela.webp" alt="Aceite esencial de citronela (Cymbopogon winterianus) 10 mL" style="width:100%;">
   </div>
 </div>
 
 <div class= "in-flex">
 
   <div class="text-block">
-  <h2>Citronela <i> (Cymbopogon winterianus) </i></h2>
-  <div class="imagen_apoyo" style="background-image:url('products/BOA Citronela.jpg');" >  </div><br>
+  <h2>Aceite esencial de Citronela <i> (Cymbopogon winterianus) </i></h2>
+  <div class="imagen_apoyo" style="background-image:url('products/BOA Citronela.webp');" >  </div><br>
   <!-- <img src="BOA Citronela.jpg" style="width:100%;" > -->
     <h4>Método de extracción: Destilación por arrastre de vapor</h4><br>
     <h4> Contenido: 10 mL </h4>
     <h4> Precio por unidad: $32.000 COP </h4>
     <h4> Precio por mayor: Contáctanos para mayor información. </h4> <br>
         <div style="width: 100%";>
-             <div class="pdf_container" style ="display:inline-block; " > 
-                    <a href="glosario.html#aceite_32" target="_blank";>
-                    <img class="img_pdf" src="pdf.png" alt="Nature"> <p class = "pdf"> Usos/Características </p> 
+             <div class="pdf_container"> 
+                    <a href="glosario.html#aceite_32" target="_blank">
+                    <img class="img_pdf" src="pdf.png" alt="PDF"> <p class = "pdf"> Usos/Características </p> 
                     </a>
             </div>
-            <div class="pdf_container" style ="display:inline-block; " > 
-                    <a  target="_blank";>
-                    <img class="img_pdf" src="pdf.png" alt="Nature"> <p class = "pdf"> COA (Certificado de Análisis) </p> 
+            <div class="pdf_container"> 
+                    <a  target="_blank">
+                    <img class="img_pdf" src="pdf.png" alt="PDF"> <p class = "pdf"> COA (Certificado de Análisis) </p> 
                     </a>
             </div>
-            <div class="pdf_container" style ="display:inline-block; " > 
-                    <a  target="_blank";>
-                    <img class="img_pdf" src="pdf.png" alt="Nature"> <p class = "pdf"> Información adicional </p> 
+            <div class="pdf_container"> 
+                    <a  target="_blank">
+                    <img class="img_pdf" src="pdf.png" alt="PDF"> <p class = "pdf"> Información adicional </p> 
                     </a>
             </div>
         </div>
@@ -502,14 +556,14 @@ display:block;
 
     <div class="text-block_img" >
     <div style="width:100%; height:5px ; background-color:#406e0c; margin-bottom:20px;">  </div>
-    <img src="products/Oregano.png" alt="Nature" style="width:100%;">
+    <img src="products/Oregano.webp" alt="Aceite esencial de orégano (Origanum vulgare) 10 mL" style="width:100%;">
   </div>
 </div>
 
 
 <div class= "in-flex">
   <div class="text-block">
-  <h2> Oregano <i> (Origanum vulgare) </i></h2>
+  <h2>Aceite esencial de Oregano <i> (Origanum vulgare) </i></h2>
   <div  class="imagen_apoyo" style="background-image:url('products/BOA Oregano.webp');" >  </div><br>
   <!-- <img src="BOA Oregano.webp" style="width:100%;" > -->
     <h4>Método de extracción: Destilación por arrastre de vapor</h4><br>
@@ -517,19 +571,19 @@ display:block;
     <h4> Precio por unidad: $32.000 COP </h4>
     <h4> Precio por mayor: Contáctanos para mayor información. </h4> <br>
         <div style="width: 100%";>
-             <div class="pdf_container" style ="display:inline-block; " > 
-                    <a href="glosario.html#aceite_98" target="_blank";>
-                    <img class="img_pdf" src="pdf.png" alt="Nature"> <p class = "pdf"> Usos/Características </p> 
+             <div class="pdf_container"> 
+                    <a href="glosario.html#aceite_98" target="_blank">
+                    <img class="img_pdf" src="pdf.png" alt="PDF"> <p class = "pdf"> Usos/Características </p> 
                     </a>
             </div>
-            <div class="pdf_container" style ="display:inline-block; " > 
-                    <a  target="_blank";>
-                    <img class="img_pdf" src="pdf.png" alt="Nature"> <p class = "pdf"> COA (Certificado de Análisis) </p> 
+            <div class="pdf_container"> 
+                    <a  target="_blank">
+                    <img class="img_pdf" src="pdf.png" alt="PDF"> <p class = "pdf"> COA (Certificado de Análisis) </p> 
                     </a>
             </div>
-            <div class="pdf_container" style ="display:inline-block; " > 
-                    <a  target="_blank";>
-                    <img class="img_pdf" src="pdf.png" alt="Nature"> <p class = "pdf"> Información adicional </p> 
+            <div class="pdf_container"> 
+                    <a  target="_blank">
+                    <img class="img_pdf" src="pdf.png" alt="PDF"> <p class = "pdf"> Información adicional </p> 
                     </a>
             </div>
         </div>
@@ -550,13 +604,13 @@ display:block;
 <div class= "in-flex">
     <div class="text-block_img" >
     <div style="width:100%; height:5px ; background-color:#ff3131; margin-bottom:20px;">  </div>
-    <img src="products/Romero.png" alt="Nature" style="width:100%;">
+    <img src="products/Romero.webp" alt="Aceite esencial de romero (Salvia rosmarinus) 10 mL" style="width:100%;">
   </div>
 </div>
 
 <div class= "in-flex">
   <div class="text-block">
-  <h2>Romero <i> (Salvia rosmarinus) </i></h2>
+  <h2>Aceite esencial de Romero <i> (Salvia rosmarinus) </i></h2>
   <div class="imagen_apoyo" style="background-image:url('products/BOA Romero.webp');" >  </div><br>
   <!-- <img src="BOA Romero.webp" style="width:100%;" > -->
     <h4>Método de extracción: Destilación por arrastre de vapor</h4><br>
@@ -564,19 +618,19 @@ display:block;
     <h4> Precio por unidad: $32.000 COP </h4>
     <h4> Precio por mayor: Contáctanos para mayor información. </h4> <br>
         <div style="width: 100%";>
-             <div class="pdf_container" style ="display:inline-block; " > 
-                    <a href="glosario.html#aceite_116" target="_blank";>
-                    <img class="img_pdf" src="pdf.png" alt="Nature"> <p class = "pdf"> Usos/Características </p> 
+             <div class="pdf_container"> 
+                    <a href="glosario.html#aceite_116" target="_blank">
+                    <img class="img_pdf" src="pdf.png" alt="PDF"> <p class = "pdf"> Usos/Características </p> 
                     </a>
             </div>
-            <div class="pdf_container" style ="display:inline-block; " > 
-                    <a  target="_blank";>
-                    <img class="img_pdf" src="pdf.png" alt="Nature"> <p class = "pdf"> COA (Certificado de Análisis) </p> 
+            <div class="pdf_container"> 
+                    <a  target="_blank">
+                    <img class="img_pdf" src="pdf.png" alt="PDF"> <p class = "pdf"> COA (Certificado de Análisis) </p> 
                     </a>
             </div>
-            <div class="pdf_container" style ="display:inline-block; " > 
-                    <a  target="_blank";>
-                    <img class="img_pdf" src="pdf.png" alt="Nature"> <p class = "pdf"> Información adicional </p> 
+            <div class="pdf_container"> 
+                    <a  target="_blank">
+                    <img class="img_pdf" src="pdf.png" alt="PDF"> <p class = "pdf"> Información adicional </p> 
                     </a>
             </div>
         </div>
@@ -592,7 +646,7 @@ display:block;
 <div class= "in-flex">
     <div class="text-block_img" >
     <div style="width:100%; height:5px ; background-color:#0cc0df; margin-bottom:20px;">  </div>
-    <img src="products/Pronto Alivio.png" alt="Nature" style="width:100%;">
+    <img src="products/Pronto Alivio.webp" alt="Aceite esencial de pronto alivio (Lippia alba) 10 mL" style="width:100%;">
   </div>
 </div>
 
@@ -607,19 +661,19 @@ display:block;
     <h4> Precio por unidad: $32.000 COP </h4>
    <h4> Precio por mayor: Contáctanos para mayor información. </h4> <br>
         <div style="width: 100%";>
-             <div class="pdf_container" style ="display:inline-block; " > 
-                    <a target="_blank";>
-                    <img class="img_pdf" src="pdf.png" alt="Nature"> <p class = "pdf"> Usos/Características </p> 
+             <div class="pdf_container"> 
+                    <a target="_blank">
+                    <img class="img_pdf" src="pdf.png" alt="PDF"> <p class = "pdf"> Usos/Características </p> 
                     </a>
             </div>
-            <div class="pdf_container" style ="display:inline-block; " > 
-                    <a  target="_blank";>
-                    <img class="img_pdf" src="pdf.png" alt="Nature"> <p class = "pdf"> COA (Certificado de Análisis) </p> 
+            <div class="pdf_container"> 
+                    <a  target="_blank">
+                    <img class="img_pdf" src="pdf.png" alt="PDF"> <p class = "pdf"> COA (Certificado de Análisis) </p> 
                     </a>
             </div>
-            <div class="pdf_container" style ="display:inline-block; " > 
-                    <a  target="_blank";>
-                    <img class="img_pdf" src="pdf.png" alt="Nature"> <p class = "pdf"> Información adicional </p> 
+            <div class="pdf_container"> 
+                    <a  target="_blank">
+                    <img class="img_pdf" src="pdf.png" alt="PDF"> <p class = "pdf"> Información adicional </p> 
                     </a>
             </div>
         </div>
@@ -674,7 +728,7 @@ display:block;
 
  <h2 id="productos"> Metabolitos secundarios </h2>
 
-<img src="products/plants chem.png" style="width:100%;"><br>
+<img src="products/plants chem.webp" style="width:100%;"><br>
 
 <p>
 
@@ -687,24 +741,24 @@ En BOAchem nos enfocamos en la extracción de metabolitos secundarios de las pla
 </p>
 
 <!--
-<img src="products/2.png" style="width:32%;float:left;">
-<img src="products/3.png" style="width:32%;float:left;">
-<img src="products/4.png" style="width:32%;float:left;">
-<img src="products/5.png" style="width:32%;float:left;">
-<img src="products/6.png" style="width:32%;float:left;">
-<img src="products/7.png" style="width:32%;float:left;">
-<img src="products/8.png" style="width:32%;float:left;">
-<img src="products/9.png" style="width:32%;float:left;">
-<img src="products/10.png" style="width:32%;float:left;">
-<img src="products/11.png" style="width:32%;float:left;">
-<img src="products/12.png" style="width:32%;float:left;">
-<img src="products/13.png" style="width:32%;float:left;">
-<img src="products/14.png" style="width:32%;float:left;">
-<img src="products/15.png" style="width:32%;float:left;">
-<img src="products/16.png" style="width:32%;float:left;">
-<img src="products/17.png" style="width:32%;float:left;">
-<img src="products/18.png" style="width:32%;float:left;">
-<img src="products/19.png" style="width:32%;float:left;">
+<img src="products/2.webp" style="width:32%;float:left;">
+<img src="products/3.webp" style="width:32%;float:left;">
+<img src="products/4.webp" style="width:32%;float:left;">
+<img src="products/5.webp" style="width:32%;float:left;">
+<img src="products/6.webp" style="width:32%;float:left;">
+<img src="products/7.webp" style="width:32%;float:left;">
+<img src="products/8.webp" style="width:32%;float:left;">
+<img src="products/9.webp" style="width:32%;float:left;">
+<img src="products/10.webp" style="width:32%;float:left;">
+<img src="products/11.webp" style="width:32%;float:left;">
+<img src="products/12.webp" style="width:32%;float:left;">
+<img src="products/13.webp" style="width:32%;float:left;">
+<img src="products/14.webp" style="width:32%;float:left;">
+<img src="products/15.webp" style="width:32%;float:left;">
+<img src="products/16.webp" style="width:32%;float:left;">
+<img src="products/17.webp" style="width:32%;float:left;">
+<img src="products/18.webp" style="width:32%;float:left;">
+<img src="products/19.webp" style="width:32%;float:left;">
 -->
 
 <h2 > Hidrolatos </h2>
@@ -725,14 +779,8 @@ Extractos libres de solventes residuales según pharmacopea USP vigente, testead
 </div>
 </div>
 
-    <div style="position:relative;bottom:0;width:100%;"> 
-        <div style="text-align:center;padding:10px;background-color:#e9eaea;color:black;" >
-            <p style="margin:0px;">BOAchem: Beauty Of Analytics & Chemistry | Juntos en la ciencia. </p>
-        </div>
-        <div style="text-align:center;background-color: black;color: #ffffff;padding:10px;">
-            <p style="margin:0px;padding:10px"> Bogotá D.C., Colombia | Mosquera Planadas, Colombia <br> <br>¡Contáctanos! <br><br> E-mail: comercial@boachem.com <br> WhatsApp/Teléfono: (+57) 321 704 4115 <br> (+57) 316 6626 025         <br> Solo WhatsApp: (+57) 320 339 3083 </p>
-        </div>
-    </div>
+
+<div id="end-info"></div>
 
 </div> 
 
@@ -766,6 +814,28 @@ function showSlides() {
     })
     .catch(error => console.error('Error loading the menu:', error));
 </script>
-
+<script>
+  fetch('/end-info.html')
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById('end-info').innerHTML = data;
+    })
+    .catch(error => console.error('Error loading the menu:', error));
+</script>
+<script>
+// SEO: datos estructurados de productos generados desde productos.json (siempre sincronizados con la tienda)
+fetch('/productos.json').then(r => r.json()).then(d => {
+  const items = (d.productos || []).filter(p => p.activo !== false).map(p => ({
+    "@type": "Product", "name": p.nombre, "description": p.descripcion, "sku": p.id, "category": p.category,
+    "image": new URL(p.imagen, location.origin + '/').href, "brand": {"@type": "Brand", "name": "BOAchem"},
+    "offers": {"@type": "Offer", "price": p.precio, "priceCurrency": d.moneda || "COP",
+      "availability": p.agotado ? "https://schema.org/OutOfStock" : "https://schema.org/InStock",
+      "url": location.origin + "/tienda.html"}
+  }));
+  const el = document.createElement('script'); el.type = 'application/ld+json';
+  el.textContent = JSON.stringify({"@context": "https://schema.org", "@graph": items});
+  document.head.appendChild(el);
+}).catch(() => {});
+</script>
 </body>
 </html>

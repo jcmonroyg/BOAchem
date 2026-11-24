@@ -154,3 +154,7 @@ input[type=checkbox]:checked ~ #menu{display: block;}
             margin-left:10%;
             width:80%;
         }
+
+
+/* SEO: títulos principales como H1 manteniendo el tamaño visual anterior */
+h1#coolbox, h1.h1_like_h4 {font-size:1em; margin:1.33em 0;}

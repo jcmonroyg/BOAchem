@@ -1,12 +1,20 @@
 ﻿<!DOCTYPE html>
-<html>
+<html lang="es">
 <head>
-
-<title> BOAchem </title>
-<link rel="stylesheet" href="style.css">
-<meta name="description" content="analisis quimicos e investigacion">
 <meta charset="UTF-8">
-<meta name="keywords" content="Bogota, Bogotá, bogota, analisis, químico, química, analitica, analítica, quimiometria, geoestadistica, estadistica, análisis,Colombia, colombia, PCA, belleza, consultoria">
+<title>Quiénes Somos | BOAchem: Consultoría Analítica en Bogotá</title>
+<meta name="description" content="Profesionales en química analítica, calidad y regulación con experiencia en laboratorios, farmacéuticas, alimentos y cosméticos. Conoce el equipo de BOAchem.">
+<link rel="canonical" href="https://boachem.com/somos.html">
+<link rel="icon" href="/favicon.ico">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="es_CO">
+<meta property="og:site_name" content="BOAchem">
+<meta property="og:title" content="Quiénes Somos | BOAchem: Consultoría Analítica en Bogotá">
+<meta property="og:description" content="Profesionales en química analítica, calidad y regulación con experiencia en laboratorios, farmacéuticas, alimentos y cosméticos. Conoce el equipo de BOAchem.">
+<meta property="og:url" content="https://boachem.com/somos.html">
+<meta property="og:image" content="https://boachem.com/LOGO.jpg">
+
+<link rel="stylesheet" href="style.css">
 <meta name="author" content="Camilo M.">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -19,7 +27,7 @@
 
 <div style="height:100%;"> <!--EMPIEZA EL CONTENIDO REGULAR DEL DOCUMENTO: HEADER, CONTENT, FOODER-->
 
-<div class="portada_2nd_" style="background-image:url('home imgs/we_are.jpg');background-attachment: fixed;width:100%;position:relative;">
+<div class="portada_2nd_" style="background-image:url('home imgs/we_are.webp');background-attachment: fixed;width:100%;position:relative;">
     
          
 </div>
@@ -63,16 +71,9 @@
 
 
 
+<div id="end-info"></div>
 
 
-    <div style="position:relative;bottom:0;width:100%;"> 
-        <div style="text-align:center;padding:10px;background-color:#e9eaea;color:#7b7b7f;" >
-            <p style="margin:0px;">BOAchem: Beauty Of Analytics & Chemistry | Juntos en la ciencia. </p>
-        </div>
-        <div style="text-align:center;background-color: black;color: #ffffff;padding:10px;">
-            <p style="margin:0px;padding:10px"> Bogotá D.C., Colombia | Mosquera Planadas, Colombia <br> <br>¡Contáctanos! <br><br> E-mail: comercial@boachem.com <br> WhatsApp/Teléfono: (+57) 316 6626 025          <br> Solo WhatsApp: (+57) 320 339 3083 </p>
-        </div>
-    </div>
 
 </div> 
 
@@ -81,6 +82,14 @@
     .then(response => response.text())
     .then(data => {
       document.getElementById('nav-menu').innerHTML = data;
+    })
+    .catch(error => console.error('Error loading the menu:', error));
+</script>
+<script>
+  fetch('/end-info.html')
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById('end-info').innerHTML = data;
     })
     .catch(error => console.error('Error loading the menu:', error));
 </script>

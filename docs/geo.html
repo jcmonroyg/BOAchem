@@ -1,12 +1,20 @@
 ﻿<!DOCTYPE html>
-<html>
+<html lang="es">
 <head>
-
-<title> BOAchem </title>
-<link rel="stylesheet" href="style.css">
-<meta name="description" content="analisis quimicos e investigacion">
 <meta charset="UTF-8">
-<meta name="keywords" content="Bogota, Bogotá, bogota, analisis, químico, química, analitica, analítica, quimiometria, geoestadistica, estadistica, análisis,Colombia, colombia, PCA, belleza, consultoria">
+<title>Geoestadística: Mapas de Contorno, Kriging y Plumas de Contaminación | BOAchem</title>
+<meta name="description" content="Mapas de contorno, mapas de calor y kriging para exploración, minería y plumas de contaminación ambiental. Análisis geoestadístico de tus datos.">
+<link rel="canonical" href="https://boachem.com/geo.html">
+<link rel="icon" href="/favicon.ico">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="es_CO">
+<meta property="og:site_name" content="BOAchem">
+<meta property="og:title" content="Geoestadística: Mapas de Contorno, Kriging y Plumas de Contaminación | BOAchem">
+<meta property="og:description" content="Mapas de contorno, mapas de calor y kriging para exploración, minería y plumas de contaminación ambiental. Análisis geoestadístico de tus datos.">
+<meta property="og:url" content="https://boachem.com/geo.html">
+<meta property="og:image" content="https://boachem.com/LOGO.jpg">
+
+<link rel="stylesheet" href="style.css">
 <meta name="author" content="Camilo M.">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -22,8 +30,8 @@
 <div style="height:100%;"> <!--EMPIEZA EL CONTENIDO REGULAR DEL DOCUMENTO: HEADER, CONTENT, FOODER-->
 
 
-<div class="portada_2nd" style="background-image:url('home imgs/5.PNG');background-attachment: fixed;width:100%;background-position: center;position:relative;">
-    <h4 id="coolbox" style="position:absolute; left:40px"> Geoestadística <br> Mapas de contorno, Exploración, Plumas de contaminación </h4>
+<div class="portada_2nd" style="background-image:url('home imgs/5.webp');background-attachment: fixed;width:100%;background-position: center;position:relative;">
+    <h1 id="coolbox" style="position:absolute; left:40px"> Geoestadística <br> Mapas de contorno, Exploración, Plumas de contaminación </h1>
          
 </div>
 
@@ -44,7 +52,7 @@
     <div id="inn2">
         <h2 id="geo"> Geoestadística </h2>
 
-<img src="geo/map.png"" style="width:100%;">
+<img src="geo/map.webp"" style="width:100%;">
 <p>
 
 La geoestadística es una rama de la estadística que se enfoca en el análisis de fenómenos que varían en el espacio geográfico. A diferencia de la estadística tradicional, la geoestadística considera no solo los valores de una variable, sino también la correlación espacial entre ellos, es decir, cómo cambian en función de su ubicación. Esto la hace especialmente útil en campos donde la distribución espacial de los datos es crucial, como la geología, la minería, la agricultura, el medio ambiente, la hidrología y la salud pública.<br><br>
@@ -67,11 +75,11 @@ La geoestadística es una rama de la estadística que se enfoca en el análisis 
 <p>
 Los mapas de calor (o heatmaps) son representaciones gráficas que permiten visualizar la intensidad o densidad de una variable en un área determinada mediante el uso de colores. Generalmente, los colores más cálidos (como el rojo o el naranja) indican valores altos o concentraciones elevadas, mientras que los colores fríos (como el azul o el verde) representan valores bajos.<br><br>
 
-<img src="geo/heat1.png"" style="width:100%;"><br>
+<img src="geo/heat1.webp"" style="width:100%;"><br>
 
 Estos mapas son herramientas muy útiles para detectar patrones, identificar zonas críticas o destacar tendencias en grandes volúmenes de datos. En el contexto espacial, se utilizan comúnmente en geoestadística, análisis geográfico y sistemas de información geográfica (SIG) para mostrar, por ejemplo, la distribución de enfermedades, la densidad poblacional, la contaminación ambiental o la intensidad de ventas en diferentes regiones.
-<img src="geo/heat2.png"" style="width:100%;"><br>
-<img src="geo/heat3.jpeg"" style="width:100%;"><br>
+<img src="geo/heat2.webp"" style="width:100%;"><br>
+<img src="geo/heat3.webp"" style="width:100%;"><br>
 </p>
 
 
@@ -109,14 +117,9 @@ Modelos de Semivariogramas
 </div>
 
 
-    <div style="position:relative;bottom:0;width:100%;"> 
-        <div style="text-align:center;padding:10px;background-color:#e9eaea;color:black;" >
-            <p style="margin:0px;">BOAchem: Beauty Of Analytics & Chemistry | Juntos en la ciencia. </p>
-        </div>
-        <div style="text-align:center;background-color: black;color: #ffffff;padding:10px;">
-            <p style="margin:0px;padding:10px"> Bogotá D.C., Colombia | Mosquera Planadas, Colombia <br> <br>¡Contáctanos! <br><br> E-mail: comercial@boachem.com <br> WhatsApp/Teléfono: (+57) 316 6626 025          <br> Solo WhatsApp: (+57) 320 339 3083 </p>
-        </div>
-    </div>
+
+<div id="end-info"></div>
+
 
 </div> 
 
@@ -129,7 +132,14 @@ Modelos de Semivariogramas
     })
     .catch(error => console.error('Error loading the menu:', error));
 </script>
-
+<script>
+  fetch('/end-info.html')
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById('end-info').innerHTML = data;
+    })
+    .catch(error => console.error('Error loading the menu:', error));
+</script>
 
 </body>
 </html>

@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <!-- Ícono del carrito (tienda.html y products.html). Reemplaza este archivo para cambiarlo en todo el sitio. -->
+  <circle cx="32" cy="32" r="32" fill="#E11D2E"/>
+  <g transform="translate(15 16) scale(1.4)" fill="none" stroke="#ffffff" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round">
+    <circle cx="8" cy="21" r="1.2" fill="#ffffff"/>
+    <circle cx="19" cy="21" r="1.2" fill="#ffffff"/>
+    <path d="M2 2h2l2.7 12.4a2 2 0 0 0 2 1.6h9.7a2 2 0 0 0 2-1.6L22 7H5.1"/>
+  </g>
+</svg>

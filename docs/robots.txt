@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+Disallow: /TEST/
+Disallow: /_backup_seo/
+
+Sitemap: https://boachem.com/sitemap.xml

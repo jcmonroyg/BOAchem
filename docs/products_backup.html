@@ -1,0 +1,773 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta name="robots" content="noindex">
+
+<title> BOAchem </title>
+<link rel="stylesheet" href="style.css">
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="0">
+<meta name="description" content="analisis quimicos e investigacion">
+<meta charset="UTF-8">
+<meta name="keywords" content="Bogota, Bogotá, bogota, analisis, químico, química, analitica, analítica, quimiometria, geoestadistica, estadistica, análisis,Colombia, colombia, PCA, belleza, consultoria">
+<meta name="author" content="Camilo M.">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+</head>
+ 
+<style>
+
+.container {
+
+  font-family: Arial;
+  display:flex;
+    flex-direction: row;
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding: 0px;
+  height: auto;
+  width: 100%;
+    justify-content: center;
+    
+}
+
+.in-flex{
+    flex:1;
+}
+
+.fixed {
+  position: fixed;
+  bottom: 10%;
+  right: 10%;
+  width: 10%;
+  /* height: 200px; */
+  border: 0px solid #ad217e;
+  z-index: 9999; 
+  background-color: rgb(8, 8, 8,0.5);
+  padding:1%;
+}
+
+
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+.pdf {
+
+    margin-top: 0px;
+    margin-bottom: 10px;
+
+}
+
+.text-block {
+      width:80%;
+  /* background: rgba(0, 0, 0, 0.5); Black background with 0.5 opacity */
+  color: black;
+    padding:20px;
+    margin:auto;
+}
+
+.text-block_img {
+  width:80%;
+  background: rgb(255, 255, 255,0.5); /* Black background with 0.5 opacity */
+  color: white;
+  text-align:center;
+    margin:auto;
+    margin-top:20px;
+}
+
+ .icon-container {
+      display: flex;         /* Places items side-by-side */
+      align-items: center;   /* Vertically centers icon and text */
+      gap: 0px;             /* Creates perfect spacing between them */
+    }
+
+    .icon-container i {
+      font-size: 24px;       /* Sets custom icon size */
+      color: #007bff;        /* Sets icon color */
+    }
+
+    .icon-text {
+      font-size: 18px;       /* Sets text size */
+      font-family: sans-serif;
+    }
+
+h1, h3, h4 {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.pdf_container {
+  width:30%;
+}
+
+.img_pdf{
+  width: 50%;
+}
+
+.solid_back{
+  height: 0%;
+}
+
+.imagen_apoyo {
+	  height:400px;
+	  width:100%;
+	  background-size: cover;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.mySlides {display: none;}
+img {vertical-align: middle;}
+
+/* Slideshow container */
+.slideshow-container {
+    height:50%;
+    width:100%;
+}
+
+
+/* The dots/bullets/indicators */
+.dot {
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width: 768px) {
+
+.container{
+
+    flex-direction: column;
+
+}
+
+.text-block_img {
+  width:100%;
+  position: relative;
+  top: 2%;
+  background: rgb(255, 255, 255,0.5);
+  color: white;
+  padding-left: 10px;
+  padding-right: 10px;
+  text-align:center;
+   display:block;
+}
+
+
+.text-block {
+  width:100%;
+left:auto;
+
+padding-left: 10px;
+  padding-right: 10px;
+display:block;
+
+}
+
+.fixed {
+  width: 30%;
+}
+
+.container {
+  height: auto;
+}
+
+
+
+.imagen_apoyo {
+	  height:200px;
+	  width:100%;
+	  background-size: cover;
+}
+
+.coolbox{
+	bottom:10%;
+	background-size:cover;
+}
+
+.portada_2nd{
+    background-size: 50% ;
+}
+	
+}
+
+
+	
+
+</style>
+
+
+
+
+<body>
+
+<div id="nav-menu"></div>
+
+ <!--TERMINA EL WELLCOME + index-->
+
+<div style="height:100%;"> <!--EMPIEZA EL CONTENIDO REGULAR DEL DOCUMENTO: HEADER, CONTENT, FOODER-->
+
+<div style="height:60px;"></div>
+
+
+<div class="slideshow-container">
+
+        <div class="mySlides fade" style="height:100%;text-align:center;">
+          <img src="https://lh3.googleusercontent.com/d/1bCaWG5FLJX-ZTmVeaJiJQM555TPeUUtP"  style="width:100%;height:100%;object-fit:contain;">
+        </div>
+
+        <div class="mySlides fade" style="height:100%;text-align:center;">
+          <img src="https://lh3.googleusercontent.com/d/1p0uVjBXZJFUGMFf7o7GlIgRlGfkscYNZ" style="width:100%;height:100%;object-fit:contain;">
+        </div>
+
+        <div class="mySlides fade" style="height:100%;text-align:center;">
+          <img src="https://lh3.googleusercontent.com/d/1duXxhIidOH979OxOiGARrfC-g-wTBUKO" style="width:100%;height:100%;object-fit:contain;">
+        </div>
+
+</div>
+
+<h4 style="position:relative; left:40px;bottom:0%;">  Productos Naturales: Aceites Esenciales, Alcohol USP, Glicerina USP, Hidrolatos </h4>
+
+<div style="text-align:center">
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="fixed">
+  <a href="https://wa.me/message/PDNFLRI43LFXJ1" target="_blank";>     <img src="products/wp.png" style="width:47%">     </a>
+  <a href="https://wa.me/message/PDNFLRI43LFXJ1" target="_blank";>     <img src="products/sc.png" style="width:47%">     </a>   
+</div>
+
+
+
+
+<div class="container" style="background-image:url('products/BOA Alivio.jpeg');">
+
+    <div class= "in-flex">
+
+      <div class="text-block_img">
+        <div style="width:100%; height:5px ; background-color:#0cc0df; margin-bottom:20px;">  </div>
+        <img src="products/alcohol.png" alt="Nature" style="width:60%;">
+      </div>
+
+    </div>
+
+<div class= "in-flex">
+      <div class="text-block" style="background: rgba(0, 0, 0, 0.5);color:white;">
+                  <h2>Alcohol Etilico 96% USP <i> (Origen Vegetal) </i></h2>
+                    <h4>Método de obtención: Fermentación y Destilación en columna de fraccionamiento</h4><br>
+                    <h4> Contenido: 1 Galón (3,8 Litros) </h4>
+                    <h4> Precio por unidad: $57.000 COP </h4> <br>
+                        <div style="width: 100%";>
+                          <div class="pdf_container" style ="display:inline-block; " >
+
+                                    <a href="COAs/BOA2026-07-15-01 CoA.pdf" target="_blank";>         
+                                    <img class="img_pdf" src="pdf.png" alt="Nature"> 
+                                    </a>
+
+                                     <p class = "pdf"> COA (Certificado de Análisis) </p> </div>
+
+
+                                <div style="width:100%; height:20px ; background-color:#0cc0df; margin-bottom:20px;">  </div>
+
+                            </div>
+            </div>
+</div>
+</div>
+
+
+
+
+
+
+
+
+<div class="container" style="background-image:url('products/BOA Alivio.jpeg');">
+
+
+<div class= "in-flex">
+    <div class="text-block_img">
+        <div style="width:100%; height:5px ; background-color:#0cc0df; margin-bottom:20px;">  </div>
+        <img src="products/glicerin.jpg" alt="Nature" style="width:60%;">
+    </div>
+</div>
+
+<div class= "in-flex">
+  <div class="text-block" style="background: rgba(0, 0, 0, 0.5); color:white;">
+        <h2>Glicerina USP <i> (Origen Vegetal) </i></h2>
+        <h4>Método de extracción: Saponificación de aceites vegetales.</h4><br>
+        <h4> Precio Galón (3,8 Litros): $85.000 COP </h4>
+        <h4> Precio 1000 mL (1 Litro): $32.000 COP </h4> <br>
+        <div style="width: 100%";>
+            <div class="pdf_container" style ="display:inline-block; " >
+
+                    <a href="COAs/BOA2026-07-22-01 CoA.pdf" target="_blank";>         
+                    <img class="img_pdf" src="pdf.png" alt="Nature"> 
+                    </a>
+
+                     <p class = "pdf"> COA (Certificado de Análisis) </p>
+            </div>
+        </div>
+        <div style="width:100%; height:20px ; background-color:#0cc0df; margin-bottom:20px;">  </div>
+  </div> 
+</div>
+</div>
+
+
+
+
+<div class="container">
+
+<div class= "in-flex">
+      <div class="text-block_img">
+        <div style="width:100%; height:5px ; background-color:#8c52ff; margin-bottom:20px;">  </div>
+        <img src="products/Lavanda.png" alt="Nature" style="width:100%;">
+      </div>
+</div>
+
+<div class= "in-flex">
+  <div class="text-block">
+  
+    <h2>Lavanda <i> (Lavandula angustifolia) </i></h2>
+    <div  class="imagen_apoyo" style="background-image:url('products/BOA Lavanda.jpg');" >  </div><br>   
+    <h4>Método de extracción: Destilación por arrastre de vapor</h4><br>
+    <h4> Contenido: 10 mL </h4>
+    <h4> Precio por unidad: $32.000 COP </h4>
+    <h4> Precio por mayor: Contáctanos para mayor información. </h4> <br>
+        <div style="width: 100%";>
+             <div class="pdf_container" style ="display:inline-block; " > 
+                    <a href="glosario.html#aceite_65" target="_blank";>
+                    <img class="img_pdf" src="pdf.png" alt="Nature"> <p class = "pdf"> Usos/Características </p> 
+                    </a>
+            </div>
+            <div class="pdf_container" style ="display:inline-block; " > 
+                    <a  target="_blank";>
+                    <img class="img_pdf" src="pdf.png" alt="Nature"> <p class = "pdf"> COA (Certificado de Análisis) </p> 
+                    </a>
+            </div>
+            <div class="pdf_container" style ="display:inline-block; " > 
+                    <a  target="_blank";>
+                    <img class="img_pdf" src="pdf.png" alt="Nature"> <p class = "pdf"> Información adicional </p> 
+                    </a>
+            </div>
+        </div>
+    <div style="width:100%; height:20px ; background-color:#8c52ff; margin-bottom:20px;">  </div>
+ </div>
+
+</div>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+<div class="container">
+
+<div class= "in-flex">
+
+  <div class="text-block_img" >
+    <div style="width:100%; height:5px ; background-color:#ffde59; margin-bottom:20px;">  </div>
+    <img src="products/Citronela.png" alt="Nature" style="width:100%;">
+  </div>
+</div>
+
+<div class= "in-flex">
+
+  <div class="text-block">
+  <h2>Citronela <i> (Cymbopogon winterianus) </i></h2>
+  <div class="imagen_apoyo" style="background-image:url('products/BOA Citronela.jpg');" >  </div><br>
+  <!-- <img src="BOA Citronela.jpg" style="width:100%;" > -->
+    <h4>Método de extracción: Destilación por arrastre de vapor</h4><br>
+    <h4> Contenido: 10 mL </h4>
+    <h4> Precio por unidad: $32.000 COP </h4>
+    <h4> Precio por mayor: Contáctanos para mayor información. </h4> <br>
+        <div style="width: 100%";>
+             <div class="pdf_container" style ="display:inline-block; " > 
+                    <a href="glosario.html#aceite_32" target="_blank";>
+                    <img class="img_pdf" src="pdf.png" alt="Nature"> <p class = "pdf"> Usos/Características </p> 
+                    </a>
+            </div>
+            <div class="pdf_container" style ="display:inline-block; " > 
+                    <a  target="_blank";>
+                    <img class="img_pdf" src="pdf.png" alt="Nature"> <p class = "pdf"> COA (Certificado de Análisis) </p> 
+                    </a>
+            </div>
+            <div class="pdf_container" style ="display:inline-block; " > 
+                    <a  target="_blank";>
+                    <img class="img_pdf" src="pdf.png" alt="Nature"> <p class = "pdf"> Información adicional </p> 
+                    </a>
+            </div>
+        </div>
+    <div style="width:100%; height:20px ; background-color:#ffde59; margin-bottom:20px;">  </div>
+  </div>
+</div>
+</div>
+
+
+
+
+
+
+	
+<div class="container">
+
+<div class= "in-flex">
+
+    <div class="text-block_img" >
+    <div style="width:100%; height:5px ; background-color:#406e0c; margin-bottom:20px;">  </div>
+    <img src="products/Oregano.png" alt="Nature" style="width:100%;">
+  </div>
+</div>
+
+
+<div class= "in-flex">
+  <div class="text-block">
+  <h2> Oregano <i> (Origanum vulgare) </i></h2>
+  <div  class="imagen_apoyo" style="background-image:url('products/BOA Oregano.webp');" >  </div><br>
+  <!-- <img src="BOA Oregano.webp" style="width:100%;" > -->
+    <h4>Método de extracción: Destilación por arrastre de vapor</h4><br>
+    <h4> Contenido: 10 mL </h4>
+    <h4> Precio por unidad: $32.000 COP </h4>
+    <h4> Precio por mayor: Contáctanos para mayor información. </h4> <br>
+        <div style="width: 100%";>
+             <div class="pdf_container" style ="display:inline-block; " > 
+                    <a href="glosario.html#aceite_98" target="_blank";>
+                    <img class="img_pdf" src="pdf.png" alt="Nature"> <p class = "pdf"> Usos/Características </p> 
+                    </a>
+            </div>
+            <div class="pdf_container" style ="display:inline-block; " > 
+                    <a  target="_blank";>
+                    <img class="img_pdf" src="pdf.png" alt="Nature"> <p class = "pdf"> COA (Certificado de Análisis) </p> 
+                    </a>
+            </div>
+            <div class="pdf_container" style ="display:inline-block; " > 
+                    <a  target="_blank";>
+                    <img class="img_pdf" src="pdf.png" alt="Nature"> <p class = "pdf"> Información adicional </p> 
+                    </a>
+            </div>
+        </div>
+    <div style="width:100%; height:20px ; background-color:#406e0c; margin-bottom:20px;">  </div>
+  </div>
+</div>
+</div>
+
+
+
+
+	
+
+
+
+<div class="container" >
+
+<div class= "in-flex">
+    <div class="text-block_img" >
+    <div style="width:100%; height:5px ; background-color:#ff3131; margin-bottom:20px;">  </div>
+    <img src="products/Romero.png" alt="Nature" style="width:100%;">
+  </div>
+</div>
+
+<div class= "in-flex">
+  <div class="text-block">
+  <h2>Romero <i> (Salvia rosmarinus) </i></h2>
+  <div class="imagen_apoyo" style="background-image:url('products/BOA Romero.webp');" >  </div><br>
+  <!-- <img src="BOA Romero.webp" style="width:100%;" > -->
+    <h4>Método de extracción: Destilación por arrastre de vapor</h4><br>
+    <h4> Contenido: 10 mL </h4>
+    <h4> Precio por unidad: $32.000 COP </h4>
+    <h4> Precio por mayor: Contáctanos para mayor información. </h4> <br>
+        <div style="width: 100%";>
+             <div class="pdf_container" style ="display:inline-block; " > 
+                    <a href="glosario.html#aceite_116" target="_blank";>
+                    <img class="img_pdf" src="pdf.png" alt="Nature"> <p class = "pdf"> Usos/Características </p> 
+                    </a>
+            </div>
+            <div class="pdf_container" style ="display:inline-block; " > 
+                    <a  target="_blank";>
+                    <img class="img_pdf" src="pdf.png" alt="Nature"> <p class = "pdf"> COA (Certificado de Análisis) </p> 
+                    </a>
+            </div>
+            <div class="pdf_container" style ="display:inline-block; " > 
+                    <a  target="_blank";>
+                    <img class="img_pdf" src="pdf.png" alt="Nature"> <p class = "pdf"> Información adicional </p> 
+                    </a>
+            </div>
+        </div>
+    <div style="width:100%; height:20px ; background-color:#ff3131; margin-bottom:20px;">  </div>
+  </div>
+</div>
+</div>
+
+
+
+<div class="container" >
+
+<div class= "in-flex">
+    <div class="text-block_img" >
+    <div style="width:100%; height:5px ; background-color:#0cc0df; margin-bottom:20px;">  </div>
+    <img src="products/Pronto Alivio.png" alt="Nature" style="width:100%;">
+  </div>
+</div>
+
+
+<div class= "in-flex">
+  <div class="text-block">
+  <h2>Pronto Alivio (Quimiotipo carvona) <i> (Lippia alba) </i></h2>
+  <div class="imagen_apoyo" style="background-image:url('products/BOA Alivio.jpeg');" >  </div> <br>
+  <!-- <img src="BOA Alivio.jpeg" style="width:100%;" > -->
+    <h4>Método de extracción: Destilación por arrastre de vapor</h4><br>
+    <h4> Contenido: 10 mL </h4>
+    <h4> Precio por unidad: $32.000 COP </h4>
+   <h4> Precio por mayor: Contáctanos para mayor información. </h4> <br>
+        <div style="width: 100%";>
+             <div class="pdf_container" style ="display:inline-block; " > 
+                    <a target="_blank";>
+                    <img class="img_pdf" src="pdf.png" alt="Nature"> <p class = "pdf"> Usos/Características </p> 
+                    </a>
+            </div>
+            <div class="pdf_container" style ="display:inline-block; " > 
+                    <a  target="_blank";>
+                    <img class="img_pdf" src="pdf.png" alt="Nature"> <p class = "pdf"> COA (Certificado de Análisis) </p> 
+                    </a>
+            </div>
+            <div class="pdf_container" style ="display:inline-block; " > 
+                    <a  target="_blank";>
+                    <img class="img_pdf" src="pdf.png" alt="Nature"> <p class = "pdf"> Información adicional </p> 
+                    </a>
+            </div>
+        </div>
+    <div style="width:100%; height:20px ; background-color:#0cc0df; margin-bottom:20px;">  </div>
+  </div>
+</div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div id="outer" style = "margin:auto;">
+    <div id="inn1" style="float:left;position:sticky;top:0;"><br>
+    
+                <li >
+                    <li><a href="products.html#etoh">Alcohol</a></li>
+                    <li><a href="products.html#oils">Aceites Esenciales</a></li>
+                    <li><a href="products.html#hidrolatos"> Hidrolatos </a></li>
+                    <li><a href="products.html#extractos"> Extractos </a></li>
+                  
+                </li>
+    
+    </div>
+    <div id="inn2">
+        <h2 id="productos"> Productos Naturales </h2>
+
+<img src="products/naturals.jpeg" style="width:100%;">
+
+<p> La obtención y extracción de productos naturales es un proceso clave en la elaboración de cosméticos, medicamentos, alimentos y productos de limpieza que buscan aprovechar los beneficios de la naturaleza. Son obtenidas directamente de fuentes naturales como: <br><br>
+
+&bull; Plantas (hojas, flores, frutos, raices, cortezas) <br><br>
+&bull; Animales (cera de abeja, lanolina) <br><br>
+&bull; Microorganismos (enzimas, antibioticos) <br><br>
+&bull; Minerales (arcillas, sales) <br><br>
+
+ <h2 id="productos"> Metabolitos secundarios </h2>
+
+<img src="products/plants chem.png" style="width:100%;"><br>
+
+<p>
+
+<br>¡Las plantas y hongos producen sustancias increibles!<br> Los metabolitos secundarios de las plantas son compuestos químicos que no son esenciales para la supervivencia inmediata de la planta (como lo serían los azúcares o aminoácidos), pero que cumplen funciones ecológicas muy importantes: defensa contra depredadores, atracción de polinizadores, adaptación al entorno y más. <br><br>
+
+A pesar de no ser vitales para el metabolismo básico (como los "primarios"), estos compuestos son fundamentales para la interacción de la planta con su entorno y muchos tienen aplicaciones farmacéuticas, cosméticas, alimenticias y agrícolas. <br><br>
+
+En BOAchem nos enfocamos en la extracción de metabolitos secundarios de las plantas en forma de aceites esenciales, hidrolatos, extractos y fermentados. <br><br>
+
+</p>
+
+<!--
+<img src="products/2.png" style="width:32%;float:left;">
+<img src="products/3.png" style="width:32%;float:left;">
+<img src="products/4.png" style="width:32%;float:left;">
+<img src="products/5.png" style="width:32%;float:left;">
+<img src="products/6.png" style="width:32%;float:left;">
+<img src="products/7.png" style="width:32%;float:left;">
+<img src="products/8.png" style="width:32%;float:left;">
+<img src="products/9.png" style="width:32%;float:left;">
+<img src="products/10.png" style="width:32%;float:left;">
+<img src="products/11.png" style="width:32%;float:left;">
+<img src="products/12.png" style="width:32%;float:left;">
+<img src="products/13.png" style="width:32%;float:left;">
+<img src="products/14.png" style="width:32%;float:left;">
+<img src="products/15.png" style="width:32%;float:left;">
+<img src="products/16.png" style="width:32%;float:left;">
+<img src="products/17.png" style="width:32%;float:left;">
+<img src="products/18.png" style="width:32%;float:left;">
+<img src="products/19.png" style="width:32%;float:left;">
+-->
+
+<h2 > Hidrolatos </h2>
+
+<img id="hidrolatos" src="products/hidrolate.webp" style="width:32%;float:left;padding: 15px;"> <br>
+<p>
+Obtenidos de manera simultánea durante el proceso de hidrodestilación de los aceites esenciales. Son extractos acuosos con moléculas más polares que las encontradas en los aceites esenciales, conservan sus propiedades aromáticas pero la concentración de aceite es significativamente más baja, por el contrario, en los hidrolatos están presentes muchas sustancias naturales afines con el agua que no se encuentran en los aceites esenciales. <br><br>
+</p>
+
+<h2 id="extractos"> Extractos </h2>
+
+<img src="products/extract.png" style="width:100%;padding: 15px;"> <br>
+<p>
+Extractos libres de solventes residuales según pharmacopea USP vigente, testeados por cromatografía de gases con sistema de inyección headspace. A diferencia de los hidrodestilados, los extractos etanólicos, extractos de n-hexano, butanol o CO2 supercrítico, contienen moléculas de alto peso molécular, azúcares, aceites vegetales, pigmentos (como la clorofila), flavonoides, carotenos, antocianidinas, polifenoles, etc. Constituyen potentes y concentrados extractos naturales, en la mayoría de los casos, equivalentes a consumir la fruta/hoja/corteza entera de la planta de la que son extraídas y no solo la porción volátil.
+
+ </p>
+
+</div>
+</div>
+
+
+<div id="end-info"></div>
+
+</div> 
+
+<script>
+let slideIndex = 0;
+showSlides();
+
+function showSlides() {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  let dots = document.getElementsByClassName("dot");
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";  
+  }
+  slideIndex++;
+  if (slideIndex > slides.length) {slideIndex = 1}    
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+  setTimeout(showSlides, 2000); // Change image every 2 seconds
+}
+</script>
+
+<script>
+  fetch('/menu.html')
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById('nav-menu').innerHTML = data;
+    })
+    .catch(error => console.error('Error loading the menu:', error));
+</script>
+<script>
+  fetch('/end-info.html')
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById('end-info').innerHTML = data;
+    })
+    .catch(error => console.error('Error loading the menu:', error));
+</script>
+</body>
+</html>

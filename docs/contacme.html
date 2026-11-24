@@ -1,111 +1,151 @@
 ﻿<!DOCTYPE html>
-<html>
+<html lang="es">
 <head>
-
-<title> BOAchem </title>
-<link rel="stylesheet" href="style.css">
-<meta name="description" content="analisis quimicos e investigacion">
 <meta charset="UTF-8">
-<meta name="keywords" content="Bogota, Bogotá, bogota, analisis, químico, química, analitica, analítica, quimiometria, geoestadistica, estadistica, análisis,Colombia, colombia, PCA, belleza, consultoria">
-<meta name="author" content="Camilo M.">
+<title>Contacto: Cotiza Consultoría ISO 17025 y Validaciones | BOAchem</title>
+<meta name="description" content="Escríbenos por WhatsApp o correo para cotizar consultoría ISO/IEC 17025, validación de métodos analíticos o comprar aceites esenciales. Bogotá, Colombia.">
+<link rel="canonical" href="https://boachem.com/contacme.html">
+<link rel="icon" href="/favicon.ico">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="es_CO">
+<meta property="og:site_name" content="BOAchem">
+<meta property="og:title" content="Contacto: Cotiza Consultoría ISO 17025 y Validaciones | BOAchem">
+<meta property="og:description" content="Escríbenos por WhatsApp o correo para cotizar consultoría ISO/IEC 17025, validación de métodos analíticos o comprar aceites esenciales. Bogotá, Colombia.">
+<meta property="og:url" content="https://boachem.com/contacme.html">
+<meta property="og:image" content="https://boachem.com/LOGO.jpg">
+
+<link rel="stylesheet" href="style.css">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
+<style>
+/* ===== Página de contacto (estilos con prefijo ct- para no chocar con style.css) ===== */
+.ct { --verde:#016946; --verde-claro:#e8f4ef; --wa:#25D366; --texto:#1f2a2e; --gris:#5f6b70; --borde:#e3e8ea;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif; color: var(--texto);
+  max-width: 1040px; margin: 0 auto; padding: 56px 20px 72px; box-sizing: border-box; }
+.ct *, .ct *::before, .ct *::after { box-sizing: border-box; }
+.ct p { margin: 0; padding: 0; }
+.ct svg { width: 22px; height: 22px; flex-shrink: 0; }
+
+.ct-hero { text-align: center; max-width: 680px; margin: 0 auto 40px; }
+.ct-eyebrow { display: inline-block; font-size: 13px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase;
+  color: var(--verde); background: var(--verde-claro); padding: 6px 12px; border-radius: 999px; margin-bottom: 16px; }
+.ct h1 { font-size: clamp(30px, 5vw, 46px); line-height: 1.1; margin: 0 0 14px; font-weight: 800; }
+.ct-lead { font-size: 18px; line-height: 1.55; color: var(--gris); }
+
+.ct-cta { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; margin-top: 26px; }
+.ct-btn { display: inline-flex; align-items: center; justify-content: center; gap: 10px; padding: 14px 22px; border-radius: 12px;
+  font-weight: 700; font-size: 16px; text-decoration: none; transition: transform .15s, box-shadow .15s, background .15s; }
+.ct-btn:hover { transform: translateY(-2px); }
+.ct-btn-wa { background: var(--wa); color: #fff; box-shadow: 0 6px 18px rgba(37,211,102,.35); }
+.ct-btn-wa:hover { background: #1fbd5a; }
+.ct-btn-out { background: #fff; color: var(--verde); border: 2px solid var(--verde); }
+.ct-btn-out:hover { background: var(--verde-claro); }
+
+.ct-topics { margin: 0 auto 48px; text-align: center; }
+.ct-topics p { font-size: 15px; color: var(--gris); margin-bottom: 12px; }
+.ct-chips { display: flex; gap: 10px; justify-content: center; flex-wrap: wrap; }
+.ct-chip { padding: 10px 16px; border-radius: 999px; border: 1px solid var(--borde); background: #fff; color: var(--texto);
+  text-decoration: none; font-size: 15px; font-weight: 600; transition: border-color .15s, background .15s; }
+.ct-chip:hover { border-color: var(--verde); background: var(--verde-claro); color: var(--verde); }
+
+.ct-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+.ct-card { background: #fff; border: 1px solid var(--borde); border-radius: 16px; padding: 26px; box-shadow: 0 1px 3px rgba(0,0,0,.04); }
+.ct-icon { width: 46px; height: 46px; border-radius: 12px; display: grid; place-items: center; background: var(--verde-claro);
+  color: var(--verde); margin-bottom: 16px; }
+.ct-card h2 { font-size: 19px; margin: 0 0 6px; }
+.ct-card .ct-note { font-size: 14.5px; color: var(--gris); line-height: 1.5; margin-bottom: 16px; }
+.ct-big { display: block; font-size: 20px; font-weight: 800; color: var(--verde); text-decoration: none; margin-bottom: 6px; }
+.ct-big:hover { text-decoration: underline; }
+.ct-small { font-size: 13.5px; color: var(--gris); line-height: 1.6; }
+.ct-mail { display: block; padding: 10px 0; border-top: 1px solid var(--borde); }
+.ct-card h2 + .ct-mail { border-top: 0; padding-top: 4px; }
+.ct-mail span { display: block; font-size: 13px; color: var(--gris); margin-bottom: 2px; }
+.ct-mail a { color: var(--verde); font-weight: 700; text-decoration: none; word-break: break-all; }
+.ct-mail a:hover { text-decoration: underline; }
+
+.ct-place { margin-top: 32px; display: flex; align-items: center; justify-content: center; gap: 10px; flex-wrap: wrap;
+  color: var(--gris); font-size: 15px; text-align: center; }
+.ct-place svg { color: var(--verde); }
+
+@media (max-width: 860px) {
+  .ct { padding: 80px 16px 56px; }            /* deja espacio para el menú fijo en móvil */
+  .ct-grid { grid-template-columns: 1fr; gap: 14px; }
+  .ct-cta .ct-btn { width: 100%; }
+  .ct-lead { font-size: 16.5px; }
+}
+</style>
 </head>
- 
+
 <body>
 
 <div id="nav-menu"></div>
- <!--TERMINA EL WELLCOME + index-->
 
-<div style="height:100%;"<!--EMPIEZA EL CONTENIDO REGULAR DEL DOCUMENTO: HEADER, CONTENT, FOODER-->
+<main class="ct">
 
-<div class="portada_2nd" style="background-image:url('fondo2.jpg');background-attachment: fixed;min-height:60%;background-size:100%;width:100%;background-position: center;position:relative;">
-    <h4 id="coolbox" style="background-color: rgb(255,255,255,0.8); position:absolute; left:40px"> Descubre cómo podemos ayudarte <br><br> Envianos un e-mail <br> Llámanos <br> Déjanos un mensaje en WhatsApp <br><br>
-¡Respondemos todos los días!  </h4>
-        <a id="coolbox_red_w" href="https://wa.me/message/PDNFLRI43LFXJ1?src=qr" target="_blank"> WhatsApp <a> 
-</div>
-
-
-<div id="outer" style = "margin:auto;">
-    <div id="inn1" style="float:left;position:sticky;top:0;"><br>
-    
-                <li >
-                    <li><a href="contacme.html#app">WhatsApp</a></li>
-                    <li><a href="contacme.html#mail">Correos</a></li>
-                    <li><a href="contacme.html#tel">Teléfono</a></li>                  
-                </li>
-    
+  <section class="ct-hero">
+    <span class="ct-eyebrow">Contacto</span>
+    <h1>Hablemos de tu proyecto</h1>
+    <p class="ct-lead">Cotiza consultoría ISO/IEC 17025, validaciones analíticas o compra aceites esenciales. Cuéntanos qué necesitas: entre más contexto nos des, mejor podemos ayudarte.</p>
+    <div class="ct-cta">
+      <a class="ct-btn ct-btn-wa" href="https://wa.me/573204126204?text=%5BWeb%5D%20Hola%20BOAchem%2C%20quisiera%20m%C3%A1s%20informaci%C3%B3n." target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.2.6.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2-.1-.1-.3-.2-.5-.3Z"/></svg> Escríbenos por WhatsApp</a>
+      <a class="ct-btn ct-btn-out" href="tel:+573204126204"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2Z"/></svg> Llamar ahora</a>
     </div>
-    <div id="inn2">
-        
-<h2 id="app"> </h2>
-<br>
-<a id="coolbox_red_whatsapp_p" href="https://wa.me/message/PDNFLRI43LFXJ1?src=qr" target="_blank" style="margin-left:5px;color:white;text-decoration:none;font-size:20px;"> WhatsApp <a> 
+  </section>
 
+  <section class="ct-topics">
+    <p>¿Sobre qué quieres hablar? Te abrimos WhatsApp con el mensaje listo:</p>
+    <div class="ct-chips">
+      <a class="ct-chip" href="https://wa.me/573204126204?text=%5BWeb%5D%20Hola%20BOAchem%2C%20quiero%20cotizar%20consultor%C3%ADa%20ISO/IEC%2017025%20para%20mi%20laboratorio." target="_blank" rel="noopener">Consultoría ISO 17025</a>
+      <a class="ct-chip" href="https://wa.me/573204126204?text=%5BWeb%5D%20Hola%20BOAchem%2C%20necesito%20apoyo%20con%20validaci%C3%B3n%20de%20m%C3%A9todos%20anal%C3%ADticos." target="_blank" rel="noopener">Validaciones analíticas</a>
+      <a class="ct-chip" href="https://wa.me/573204126204?text=%5BWeb%5D%20Hola%20BOAchem%2C%20quiero%20informaci%C3%B3n%20sobre%20sus%20aceites%20esenciales." target="_blank" rel="noopener">Aceites esenciales</a>
+      <a class="ct-chip" href="https://wa.me/573204126204?text=%5BWeb%5D%20Hola%20BOAchem%2C%20quiero%20cotizar%20el%20servicio%20de%20hidrodestilaci%C3%B3n." target="_blank" rel="noopener">Servicio de hidrodestilación</a>
+      <a class="ct-chip" href="https://wa.me/573204126204?text=%5BWeb%5D%20Hola%20BOAchem%2C%20tengo%20otra%20consulta%3A" target="_blank" rel="noopener">Otra consulta</a>
+    </div>
+  </section>
 
-<p>
-<br>
-Déjanos un mensaje. Háblanos de tu solicitud, contextualiza tu requerimiento. Entre más información tengamos, más podemos ayudarte. <br><br>
+  <section class="ct-grid">
 
-(+57) 316 662 6025 <br>
-(+57) 321 704 4115 <br>
-(+57) 320 339 3083
-
-
-</p>
-
-<h2 id="mail"> Correos </h2>
-
-<p>
-
-Para cotizaciones, información sobre ventas, productos y servicios:
-<br>comercial@boachem.com <br><br>
-
-Para negociaciones, alianzas, propuestas: <br>
-gerencia.bogota@boachem.com <br><br>
-
-Para facturación, impuestos, ordenes de compra: <br>
-administrativa@boachem.com
-
-</p>
-
-<h2 id="mail"> Teléfono </h2>
-<p>
-Muchos prefieren la cercanía que ofrece una llamada telefónica. Puedes escribir a WhatsApp si no te contestamos de inmediato y te devolveremos la llamada en el menor tiempo posible.<br><br>
-(+57) 316 662 6025
-</p>
-
-
-
-
-
-</div>
-</div>
-
-
-
-
-    <div style="position:relative;bottom:0;width:100%;"> 
-        <div style="text-align:center;padding:10px;background-color:#e9eaea;color:black;" >
-            <p style="margin:0px;">BOAchem: Beauty Of Analytics & Chemistry | Juntos en la ciencia. </p>
-        </div>
-        <div style="text-align:center;background-color: black;color: #ffffff;padding:10px;">
-            <p style="margin:0px;padding:10px"> Bogotá D.C., Colombia | Mosquera Planadas, Colombia <br> <br>¡Contáctanos! <br><br> E-mail: comercial@boachem.com <br> WhatsApp/Teléfono: (+57) 316 6626 025          <br> Solo WhatsApp: (+57) 320 339 3083 </p>
-        </div>
+    <div class="ct-card">
+      <div class="ct-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.2.6.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2-.1-.1-.3-.2-.5-.3Z"/></svg></div>
+      <h2>WhatsApp</h2>
+      <p class="ct-note">La forma más rápida. ¡Respondemos todos los días!</p>
+      <a class="ct-big" href="https://wa.me/573204126204?text=%5BWeb%5D%20Hola%20BOAchem%2C%20quisiera%20m%C3%A1s%20informaci%C3%B3n." target="_blank" rel="noopener">+57 320 412 6204</a>
+      <p class="ct-small">Otras líneas: +57 316 662 6025 · +57 321 704 4115 · +57 320 339 3083</p>
     </div>
 
-</div> 
+    <div class="ct-card">
+      <div class="ct-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2Z"/></svg></div>
+      <h2>Teléfono</h2>
+      <p class="ct-note">¿Prefieres hablar? Si no contestamos de inmediato, déjanos un WhatsApp y te devolvemos la llamada.</p>
+      <a class="ct-big" href="tel:+573204126204">+57 320 412 6204</a>
+    </div>
+
+    <div class="ct-card">
+      <div class="ct-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M4 4h16a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2Zm18 2-10 7L2 6"/></svg></div>
+      <h2>Correo</h2>
+      <div class="ct-mail"><span>Cotizaciones, productos y servicios</span><a href="mailto:comercial@boachem.com">comercial@boachem.com</a></div>
+      <div class="ct-mail"><span>Alianzas y propuestas</span><a href="mailto:gerencia.bogota@boachem.com">gerencia.bogota@boachem.com</a></div>
+      <div class="ct-mail"><span>Facturación y órdenes de compra</span><a href="mailto:administrativa@boachem.com">administrativa@boachem.com</a></div>
+    </div>
+
+  </section>
+
+  <p class="ct-place"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 0 1 18 0Z"/><circle cx="12" cy="10" r="3" fill="none" stroke="currentColor" stroke-width="2"/></svg> Bogotá D.C. · Mosquera Planadas, Colombia</p>
+
+</main>
+
+<div id="end-info"></div>
 
 <script>
   fetch('/menu.html')
     .then(response => response.text())
-    .then(data => {
-      document.getElementById('nav-menu').innerHTML = data;
-    })
+    .then(data => { document.getElementById('nav-menu').innerHTML = data; })
     .catch(error => console.error('Error loading the menu:', error));
+  fetch('/end-info.html')
+    .then(response => response.text())
+    .then(data => { document.getElementById('end-info').innerHTML = data; })
+    .catch(error => console.error('Error loading the footer:', error));
 </script>
-
-
 
 </body>
 </html>
