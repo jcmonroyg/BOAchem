@@ -1,0 +1,262 @@
+/* Carrito de compras. Cambia los colores en las variables --cc-* para que
+   combinen con tu página. Todo usa el prefijo .cc- para no chocar con tus estilos. */
+/* Siempre en modo claro, aunque el dispositivo del cliente use modo oscuro. */
+:root {
+  color-scheme: only light;
+  --cc-fondo: #ffffff;
+  --cc-superficie: #eef6f2;
+  --cc-texto: #17241f;
+  --cc-texto-suave: #55665e;
+  --cc-borde: #d2e2da;
+  --cc-acento: #016946;
+  --cc-acento-texto: #ffffff;
+  --cc-error: #b3261e;
+  --cc-exito: #016946;
+  --cc-sombra: 0 18px 48px rgba(1, 60, 40, 0.22);
+  /* Colores de las etiquetas junto al precio (con contraste suficiente para texto blanco). */
+  --cc-etiqueta-roja: #c62828;
+  --cc-etiqueta-naranja: #c2410c;
+  --cc-etiqueta-gris-fondo: #e9ecea;
+  --cc-etiqueta-gris-texto: #3b4541;
+  /* Franja amarilla sobre la imagen (texto oscuro para que se lea bien). */
+  --cc-franja-amarilla: #fcd34d;
+  --cc-franja-amarilla-texto: #3a2c00;
+}
+/* ---------- Catálogo ---------- */
+.cc-categorias {
+  display: flex; flex-wrap: wrap; gap: 0.5rem;
+  margin: 0 0 2.5rem;
+}
+.cc-categorias a {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  border: 1px solid var(--cc-acento);
+  border-radius: 999px;
+  color: var(--cc-acento);
+  font-weight: 600; font-size: 0.92rem;
+  text-decoration: none;
+}
+.cc-categorias a:hover { background: var(--cc-acento); color: var(--cc-acento-texto); }
+.cc-categorias a:focus-visible { outline: 3px solid var(--cc-acento); outline-offset: 2px; }
+.cc-seccion { margin: 0 0 4rem; scroll-margin-top: 1.5rem; }
+.cc-seccion h2 {
+  margin: 0 0 1.5rem; padding-bottom: 0.6rem;
+  font-size: clamp(1.35rem, 3vw, 1.75rem);
+  color: var(--cc-texto);
+  border-bottom: 2px solid var(--cc-acento);
+}
+.cc-grilla {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 230px), 1fr));
+  gap: 2rem 1.5rem;
+}
+.cc-producto { display: flex; flex-direction: column; gap: 0.5rem; color: var(--cc-texto); }
+.cc-imagen {
+  position: relative;
+  border-radius: 6px;
+  overflow: hidden;
+  background: var(--cc-superficie);
+}
+.cc-producto .cc-imagen img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+}
+/* Franja que ocupa el 30% inferior de la imagen. */
+.cc-franja {
+  position: absolute; left: 0; right: 0; bottom: 0;
+  height: 30%;
+  display: flex; align-items: center; justify-content: center;
+  padding: 0 0.75rem;
+  text-align: center;
+  font-weight: 700; font-size: 1.05rem; line-height: 1.25;
+  overflow: hidden;
+}
+.cc-franja-roja { background: var(--cc-etiqueta-roja); color: #ffffff; letter-spacing: 0.04em; text-transform: uppercase; }
+.cc-franja-amarilla { background: var(--cc-franja-amarilla); color: var(--cc-franja-amarilla-texto); }
+/* Botón de producto agotado: gris y sin acción. */
+.cc-agotado .cc-btn,
+.cc-agotado .cc-btn:disabled {
+  background: #c9cecb; border-color: #c9cecb; color: #4a524e;
+  opacity: 1; cursor: not-allowed; filter: none;
+}
+.cc-producto h3 { margin: 0.5rem 0 0; font-size: 1.05rem; line-height: 1.3; }
+.cc-producto p { margin: 0; color: var(--cc-texto-suave); font-size: 0.92rem; line-height: 1.45; }
+.cc-precio-fila {
+  display: flex; flex-wrap: wrap; align-items: center; gap: 0.4rem 0.5rem;
+  margin-top: auto; padding-top: 0.25rem;
+}
+.cc-producto .cc-precio { font-weight: 600; font-size: 1.05rem; color: var(--cc-texto); margin-right: 0.15rem; }
+.cc-etiqueta {
+  display: inline-block;
+  font-size: 0.75rem; font-weight: 700; line-height: 1.2;
+  padding: 0.25rem 0.5rem;
+  border-radius: 3px;
+}
+.cc-etiqueta-neutra { background: var(--cc-etiqueta-gris-fondo); color: var(--cc-etiqueta-gris-texto); }
+.cc-etiqueta-roja { background: var(--cc-etiqueta-roja); color: #ffffff; }
+.cc-etiqueta-naranja { background: var(--cc-etiqueta-naranja); color: #ffffff; }
+
+/* ---------- Botones ---------- */
+.cc-btn {
+  font: inherit;
+  font-weight: 600;
+  border: 1px solid var(--cc-acento);
+  background: var(--cc-acento);
+  color: var(--cc-acento-texto);
+  border-radius: 999px;
+  padding: 0.7rem 1.2rem;
+  cursor: pointer;
+  min-height: 44px;
+}
+.cc-btn:hover { filter: brightness(1.08); }
+.cc-btn:disabled { opacity: 0.55; cursor: not-allowed; }
+.cc-btn-sec { background: transparent; color: var(--cc-acento); }
+.cc-btn:focus-visible, .cc-panel button:focus-visible, .cc-panel input:focus-visible,
+.cc-panel select:focus-visible, .cc-panel textarea:focus-visible, .cc-abrir:focus-visible {
+  outline: 3px solid var(--cc-acento);
+  outline-offset: 2px;
+}
+
+/* ---------- Botón flotante ---------- */
+.cc-abrir {
+  position: fixed;
+  right: 1.25rem;
+  bottom: calc(1.25rem + env(safe-area-inset-bottom, 0px));
+  z-index: 900;
+  width: 58px; height: 58px;
+  border-radius: 50%;
+  border: none;
+  padding: 0;
+  background: transparent;
+  box-shadow: 0 6px 18px rgba(225, 29, 46, 0.35);
+  cursor: pointer;
+  display: grid; place-items: center;
+  transition: transform 0.15s;
+}
+.cc-abrir:hover { transform: translateY(-2px) scale(1.04); }
+.cc-abrir .cc-icono { width: 100%; height: 100%; display: block; border-radius: 50%; }
+.cc-contador {
+  position: absolute; top: -4px; right: -4px;
+  min-width: 24px; height: 24px; padding: 0 6px;
+  border-radius: 999px;
+  background: var(--cc-fondo); color: var(--cc-texto);
+  border: 2px solid #E11D2E;
+  font: 700 0.8rem/20px system-ui, sans-serif;
+}
+.cc-contador[hidden] { display: none; }
+.cc-pulso { animation: cc-pulso 0.45s ease-out; }
+@keyframes cc-pulso { 0% { transform: scale(1); } 40% { transform: scale(1.18); } 100% { transform: scale(1); } }
+
+/* ---------- Panel lateral ---------- */
+.cc-velo {
+  position: fixed; inset: 0; z-index: 10000; /* por encima del menú del sitio (z-index 3000) */
+  background: rgba(1, 40, 27, 0.45);
+}
+.cc-panel {
+  position: fixed; top: 0; right: 0; bottom: 0; z-index: 10001; /* por encima del menú del sitio */
+  width: min(440px, 100%);
+  display: flex; flex-direction: column;
+  background: var(--cc-fondo); color: var(--cc-texto);
+  box-shadow: var(--cc-sombra);
+  font-family: inherit;
+  padding-top: env(safe-area-inset-top, 0px);
+  padding-bottom: env(safe-area-inset-bottom, 0px);
+  transform: translateX(0);
+  transition: transform 0.28s ease;
+}
+.cc-panel.cc-oculto { transform: translateX(105%); }
+.cc-velo[hidden], .cc-panel[hidden], .cc-panel [hidden] { display: none !important; }
+.cc-cabecera {
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 1rem 1.25rem; border-bottom: 1px solid var(--cc-borde);
+}
+.cc-cabecera h2 { margin: 0; font-size: 1.2rem; }
+.cc-cerrar {
+  font: inherit; font-size: 1.6rem; line-height: 1;
+  background: none; border: none; color: var(--cc-texto);
+  width: 44px; height: 44px; cursor: pointer; border-radius: 50%;
+}
+.cc-cuerpo { flex: 1; min-height: 0; overflow-y: auto; -webkit-overflow-scrolling: touch; overscroll-behavior: contain; padding: 0.5rem 1.25rem 1.25rem; }
+
+/* style.css oculta todas las listas <ul> en móvil (menú); aquí se fuerza a mostrar la lista del carrito */
+.cc-panel .cc-items { list-style: none; margin: 0; padding: 0; display: block !important; position: static !important; z-index: auto; }
+.cc-panel .cc-items li { width: auto; float: none; z-index: auto; } /* anula li {float:left} de style.css */
+.cc-item {
+  display: grid; grid-template-columns: 64px 1fr auto; gap: 0.85rem;
+  padding: 1rem 0; border-bottom: 1px solid var(--cc-borde);
+}
+.cc-item img { width: 64px; height: 64px; object-fit: cover; border-radius: 4px; background: var(--cc-superficie); }
+.cc-item-nombre { margin: 0; font-weight: 600; font-size: 0.95rem; line-height: 1.3; }
+.cc-item-unitario { margin: 0.15rem 0 0.5rem; color: var(--cc-texto-suave); font-size: 0.85rem; }
+.cc-item-total { font-weight: 600; white-space: nowrap; text-align: right; }
+.cc-cantidad { display: inline-flex; align-items: center; border: 1px solid var(--cc-borde); border-radius: 999px; }
+.cc-cantidad button {
+  font: inherit; width: 36px; height: 36px; border: none; background: none;
+  color: var(--cc-texto); cursor: pointer; border-radius: 50%;
+}
+.cc-cantidad span { min-width: 1.75rem; text-align: center; font-variant-numeric: tabular-nums; }
+.cc-quitar {
+  font: inherit; font-size: 0.82rem; background: none; border: none; padding: 0.4rem 0;
+  color: var(--cc-texto-suave); text-decoration: underline; cursor: pointer; margin-left: 0.75rem;
+}
+.cc-vacio { color: var(--cc-texto-suave); padding: 2rem 0; line-height: 1.5; }
+
+.cc-resumen { padding: 1rem 0 0; display: grid; gap: 0.4rem; font-variant-numeric: tabular-nums; }
+.cc-fila { display: flex; justify-content: space-between; gap: 1rem; }
+.cc-fila-total { font-weight: 700; font-size: 1.1rem; padding-top: 0.4rem; border-top: 1px solid var(--cc-borde); margin-top: 0.3rem; }
+.cc-aviso-envio {
+  margin: 0.1rem 0 0.3rem;
+  padding: 0.7rem 0.85rem;
+  border-left: 4px solid var(--cc-etiqueta-naranja);
+  background: #fff4e5;
+  color: var(--cc-texto);
+  font-size: 0.86rem; line-height: 1.45;
+  border-radius: 0 4px 4px 0;
+}
+.cc-nota { color: var(--cc-texto-suave); font-size: 0.85rem; margin: 0.25rem 0 0; }
+
+.cc-pie { padding: 1rem 1.25rem; border-top: 1px solid var(--cc-borde); display: grid; gap: 0.6rem; }
+.cc-pie .cc-btn { width: 100%; }
+
+/* ---------- Formulario ---------- */
+.cc-form { display: grid; gap: 0.85rem; padding-top: 1rem; }
+.cc-form h3 { margin: 0.5rem 0 0; font-size: 1rem; }
+.cc-campo { display: grid; gap: 0.3rem; }
+.cc-campo label { font-size: 0.88rem; font-weight: 600; }
+.cc-campo input, .cc-campo select, .cc-campo textarea {
+  font: inherit; font-size: 1rem; color: var(--cc-texto);
+  background: var(--cc-fondo); border: 1px solid var(--cc-borde);
+  border-radius: 6px; padding: 0.65rem 0.75rem; width: 100%; box-sizing: border-box;
+}
+.cc-dos { display: grid; grid-template-columns: 1fr 1fr; gap: 0.75rem; }
+.cc-dos-b { display: grid; grid-template-columns: 0.8fr 1.2fr; gap: 0.75rem; }
+.cc-acepto { display: flex; gap: 0.6rem; align-items: flex-start; font-size: 0.88rem; line-height: 1.45; }
+.cc-acepto input { margin-top: 0.2rem; width: 20px; height: 20px; flex: none; }
+/* style.css oculta TODAS las casillas (truco del menú móvil); aquí se vuelve a mostrar la de "Acepto". */
+.cc-panel input[type=checkbox] { display: inline-block !important; -webkit-appearance: checkbox !important; appearance: auto !important; accent-color: var(--cc-acento); cursor: pointer; }
+/* Campos con error: borde y texto en rojo */
+.cc-con-error input, .cc-con-error select, .cc-con-error textarea { border-color: var(--cc-error) !important; box-shadow: 0 0 0 3px rgba(200, 30, 30, 0.12); }
+.cc-con-error label, .cc-acepto.cc-con-error { color: var(--cc-error); }
+.cc-acepto.cc-con-error { background: #fdecec; border-radius: 6px; padding: 0.5rem; }
+.cc-acepto a { color: var(--cc-acento); }
+.cc-mensaje { margin: 0; font-size: 0.9rem; line-height: 1.45; min-height: 1.3em; }
+.cc-mensaje.cc-es-error { color: var(--cc-error); }
+.cc-mensaje.cc-es-exito { color: var(--cc-exito); }
+.cc-medios { margin: 0; text-align: center; font-size: 0.8rem; color: var(--cc-texto-suave); }
+
+/* Columnas de productos en celulares: se controla con --columnas-movil en tienda.html */
+@media (max-width: 650px) {
+  .cc-grilla { grid-template-columns: repeat(var(--columnas-movil, 1), minmax(0, 1fr)); gap: 1.5rem 0.75rem; }
+  .cc-grilla .cc-btn { padding: 0.6rem 0.75rem; font-size: 0.9rem; }
+  .cc-grilla .cc-franja { font-size: 0.85rem; }
+}
+
+@media (max-width: 420px) {
+  .cc-dos, .cc-dos-b { grid-template-columns: 1fr; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .cc-panel { transition: none; }
+  .cc-pulso { animation: none; }
+}
