@@ -9,7 +9,7 @@ window.TIENDA_CONFIG = {
   // URL de tu Cloudflare Worker (lo crearemos en el siguiente paso).
   // Mientras esté vacío, el carrito funciona pero el botón de pago avisa
   // que los pagos aún no están configurados.
-  workerUrl: '',
+  workerUrl: 'https://simpledream.boachem-colombia.workers.dev',
 
   // Página a la que vuelve el cliente después de pagar (por ejemplo, con PSE).
   urlGracias: new URL('gracias.html', location.href).href,
